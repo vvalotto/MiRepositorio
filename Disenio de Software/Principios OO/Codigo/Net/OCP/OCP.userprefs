@@ -1,0 +1,21 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OCP/Program.cs">
+    <Files>
+      <File FileName="NoOCP/Program.cs" Line="1" Column="1" />
+      <File FileName="NoOCP/EditorGrafico.cs" Line="1" Column="1" />
+      <File FileName="NoOCP/Forma.cs" Line="1" Column="1" />
+      <File FileName="OCP/Forma.cs" Line="1" Column="1" />
+      <File FileName="OCP/Program.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
