@@ -21,6 +21,7 @@ namespace SPR
             Console.WriteLine("Total: " + miFacturaB._importeTotal);
             Console.ReadLine();
 
+
         }
     }
 }
