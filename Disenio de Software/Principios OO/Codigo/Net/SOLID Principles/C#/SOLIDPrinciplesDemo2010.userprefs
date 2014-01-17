@@ -1,8 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SOLIDPrinciplesDemo.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DependencyInversionPrincipleDemo.cs">
     <Files>
       <File FileName="SOLIDPrinciplesDemo.cs" Line="21" Column="22" />
+      <File FileName="SingleResponsibilityDemo.cs" Line="1" Column="1" />
+      <File FileName="OpenClosePrincipleDemo.cs" Line="1" Column="1" />
+      <File FileName="LiskovSubstitutionPrincipleDemo.cs" Line="1" Column="1" />
+      <File FileName="InterfaceSegregationPrincipleDemo.cs" Line="1" Column="1" />
+      <File FileName="DependencyInversionPrincipleDemo.cs" Line="18" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

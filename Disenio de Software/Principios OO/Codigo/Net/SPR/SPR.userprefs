@@ -1,23 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SPR/Deduccion.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SPR/Program.cs">
     <Files>
-      <File FileName="SPR/modem.cs" Line="1" Column="1" />
-      <File FileName="SPR/Program.cs" Line="21" Column="53" />
-      <File FileName="SPR/Factura.cs" Line="52" Column="4" />
-      <File FileName="SPR/Deduccion.cs" Line="13" Column="3" />
-      <File FileName="SPR/IVA.cs" Line="15" Column="3" />
+      <File FileName="SPR/Factura.cs" Line="1" Column="1" />
+      <File FileName="SPR/IVA.cs" Line="1" Column="1" />
+      <File FileName="SPR/Deduccion.cs" Line="1" Column="1" />
+      <File FileName="SPR/Program.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ClassPad">
-        <State expanded="True">
-          <Node name="SPR" expanded="True">
-            <Node name="ConsoleApplication1" expanded="True" selected="True" />
-            <Node name="SPR" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
