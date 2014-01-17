@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrincipiosSOLID", "PrincipiosSOLID\PrincipiosSOLID.csproj", "{44751DE6-E7CC-4D31-9A4D-4DCF6E2692DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrincipiosSOLID", "PrincipiosSOLID\PrincipiosSOLID.csproj", "{D8151A47-39C7-457B-8159-033BDDDF8D8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPR", "..\SPR\SPR\SPR.csproj", "{E08BE43F-E9D7-4AA4-82C3-2B3402962126}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPR", "SPR\SPR.csproj", "{AB0D23C3-C5F3-4751-A296-3797B1637AC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCP 1", "..\OCP 1\OCP 1\OCP 1.csproj", "{D0553F52-DE44-4E47-B3AF-95C7F90F8957}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoSPR", "NoSPR\NoSPR.csproj", "{94E4F672-5E99-4B8E-A7DE-3607F6E9E0F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimuladorSenial", "SimuladorSenial\SimuladorSenial.csproj", "{73EAC079-AE19-4830-8215-99E70D873815}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,20 +15,24 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{44751DE6-E7CC-4D31-9A4D-4DCF6E2692DE}.Debug|x86.ActiveCfg = Debug|x86
-		{44751DE6-E7CC-4D31-9A4D-4DCF6E2692DE}.Debug|x86.Build.0 = Debug|x86
-		{44751DE6-E7CC-4D31-9A4D-4DCF6E2692DE}.Release|x86.ActiveCfg = Release|x86
-		{44751DE6-E7CC-4D31-9A4D-4DCF6E2692DE}.Release|x86.Build.0 = Release|x86
-		{D0553F52-DE44-4E47-B3AF-95C7F90F8957}.Debug|x86.ActiveCfg = Debug|x86
-		{D0553F52-DE44-4E47-B3AF-95C7F90F8957}.Debug|x86.Build.0 = Debug|x86
-		{D0553F52-DE44-4E47-B3AF-95C7F90F8957}.Release|x86.ActiveCfg = Release|x86
-		{D0553F52-DE44-4E47-B3AF-95C7F90F8957}.Release|x86.Build.0 = Release|x86
-		{E08BE43F-E9D7-4AA4-82C3-2B3402962126}.Debug|x86.ActiveCfg = Debug|x86
-		{E08BE43F-E9D7-4AA4-82C3-2B3402962126}.Debug|x86.Build.0 = Debug|x86
-		{E08BE43F-E9D7-4AA4-82C3-2B3402962126}.Release|x86.ActiveCfg = Release|x86
-		{E08BE43F-E9D7-4AA4-82C3-2B3402962126}.Release|x86.Build.0 = Release|x86
+		{73EAC079-AE19-4830-8215-99E70D873815}.Debug|x86.ActiveCfg = Debug|x86
+		{73EAC079-AE19-4830-8215-99E70D873815}.Debug|x86.Build.0 = Debug|x86
+		{73EAC079-AE19-4830-8215-99E70D873815}.Release|x86.ActiveCfg = Release|x86
+		{73EAC079-AE19-4830-8215-99E70D873815}.Release|x86.Build.0 = Release|x86
+		{94E4F672-5E99-4B8E-A7DE-3607F6E9E0F6}.Debug|x86.ActiveCfg = Debug|x86
+		{94E4F672-5E99-4B8E-A7DE-3607F6E9E0F6}.Debug|x86.Build.0 = Debug|x86
+		{94E4F672-5E99-4B8E-A7DE-3607F6E9E0F6}.Release|x86.ActiveCfg = Release|x86
+		{94E4F672-5E99-4B8E-A7DE-3607F6E9E0F6}.Release|x86.Build.0 = Release|x86
+		{AB0D23C3-C5F3-4751-A296-3797B1637AC0}.Debug|x86.ActiveCfg = Debug|x86
+		{AB0D23C3-C5F3-4751-A296-3797B1637AC0}.Debug|x86.Build.0 = Debug|x86
+		{AB0D23C3-C5F3-4751-A296-3797B1637AC0}.Release|x86.ActiveCfg = Release|x86
+		{AB0D23C3-C5F3-4751-A296-3797B1637AC0}.Release|x86.Build.0 = Release|x86
+		{D8151A47-39C7-457B-8159-033BDDDF8D8C}.Debug|x86.ActiveCfg = Debug|x86
+		{D8151A47-39C7-457B-8159-033BDDDF8D8C}.Debug|x86.Build.0 = Debug|x86
+		{D8151A47-39C7-457B-8159-033BDDDF8D8C}.Release|x86.ActiveCfg = Release|x86
+		{D8151A47-39C7-457B-8159-033BDDDF8D8C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = PrincipiosSOLID\PrincipiosSOLID.csproj
+		StartupItem = SimuladorSenial\SimuladorSenial.csproj
 	EndGlobalSection
 EndGlobal

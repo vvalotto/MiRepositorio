@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D8151A47-39C7-457B-8159-033BDDDF8D8C}</ProjectGuid>
+    <ProjectGuid>{AB0D23C3-C5F3-4751-A296-3797B1637AC0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PrincipiosSOLID</RootNamespace>
-    <AssemblyName>PrincipiosSOLID</AssemblyName>
+    <RootNamespace>SPR</RootNamespace>
+    <AssemblyName>SPR</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,18 +34,16 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SPR\Deduccion.cs" />
+    <Compile Include="SPR\IVA.cs" />
+    <Compile Include="SPR\modem.cs" />
+    <Compile Include="SPR\Program.cs" />
+    <Compile Include="Modelo\Factura.cs" />
+    <Compile Include="SPR\CalculadorFactura.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\NoSPR\NoSPR.csproj">
-      <Project>{94E4F672-5E99-4B8E-A7DE-3607F6E9E0F6}</Project>
-      <Name>NoSPR</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SPR\SPR.csproj">
-      <Project>{AB0D23C3-C5F3-4751-A296-3797B1637AC0}</Project>
-      <Name>SPR</Name>
-    </ProjectReference>
+    <Folder Include="SPR\" />
   </ItemGroup>
 </Project>
