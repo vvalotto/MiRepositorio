@@ -1,5 +1,7 @@
 using System;
-using SPR;
+using LibOCPControlador;
+using LibOCPReglas;
+using LibOCPModelo;
 
 namespace PrincipiosSOLID
 {
@@ -8,13 +10,19 @@ namespace PrincipiosSOLID
 		public static void Main (string[] args)
 		{
 			Console.WriteLine("Iniciando");
-			Factura factura = new Factura();
-			CalculadorFactura calculador = new CalculadorFactura();
+			Factura factura1 = new Factura();
+			Factura factura2 = new Factura();
 
-			factura.importeFactura = 100;
-			calculador.CalcularTotal(factura);
+			CalculadorFactura calculador1 = new CalculadorFactura(new DeduccionSimple());
+			factura1.importeFactura = 100;
+			calculador1.CalcularTotal(factura1);
 
-			Console.WriteLine(factura.importeTotal);
+			CalculadorFactura calculador2 = new CalculadorFactura(new DeduccionProporcional());
+			factura2.importeFactura = 200;
+			calculador2.CalcularTotal(factura2);
+		
+			Console.WriteLine(factura1.importeTotal);
+			Console.WriteLine(factura2.importeTotal);
 
 		}
 	}

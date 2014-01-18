@@ -1,6 +1,6 @@
 using System;
 
-namespace SPR
+namespace LibSPR
 {
 	public class Factura
 	{

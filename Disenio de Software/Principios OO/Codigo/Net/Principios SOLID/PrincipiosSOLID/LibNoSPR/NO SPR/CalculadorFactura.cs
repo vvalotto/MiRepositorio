@@ -1,6 +1,6 @@
 using System;
 
-namespace NoSPR
+namespace LibNoSPR
 {
 	public class CalculadorFactura
 	{

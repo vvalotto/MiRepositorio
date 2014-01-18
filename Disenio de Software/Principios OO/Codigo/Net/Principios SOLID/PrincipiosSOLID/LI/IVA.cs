@@ -1,0 +1,16 @@
+using System;
+
+namespace LibSPRReglas
+
+{
+	public class IVA
+	{
+	
+		public readonly decimal _iva = 0.16m;
+
+		public decimal CalcularIVA(decimal importe)
+		{
+			return importe * _iva;
+		}
+	}
+}
