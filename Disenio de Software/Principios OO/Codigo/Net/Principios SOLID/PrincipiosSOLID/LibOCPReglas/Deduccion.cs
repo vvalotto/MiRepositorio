@@ -1,4 +1,5 @@
 using System;
+using LibOCPModelo;
 
 namespace LibOCPReglas
 {
@@ -27,16 +28,29 @@ namespace LibOCPReglas
 
 	public abstract class ADeduccion
 	{
-		public abstract decimal CalcularDeduccion (decimal importe);
+		protected Factura factura;
+
+		public ADeduccion(Factura _factura)
+		{
+			factura = _factura;
+		}
+
+		public abstract decimal CalcularDeduccion ();
 
 	}
 
 	public class DeduccionSimple:ADeduccion
 	{
 		private decimal _deduccion = 10;
-		override public decimal CalcularDeduccion(decimal importe)
+
+		public DeduccionSimple(Factura factura):base(factura)
 		{
-			return (importe * _deduccion) / 100;
+		}
+	
+	override public decimal CalcularDeduccion ()
+		{
+
+			return (factura.importeFactura * _deduccion) / 100;
 		}
 
 	}
@@ -46,17 +60,47 @@ namespace LibOCPReglas
 		private decimal _deduccion = 10;
 		private decimal _deduccion_vip = 20;
 
-		override public decimal CalcularDeduccion(decimal importe)
+		public DeduccionProporcional(Factura factura):base(factura)
 		{
-			if (importe > 100) {
-				return (importe * _deduccion_vip) / 100;
+		}
+
+		override public decimal CalcularDeduccion()
+		{
+			if (factura.importeFactura > 100) {
+				return (factura.importeFactura * _deduccion_vip) / 100;
 			} else {
-				return (importe * _deduccion) / 100;
+				return (factura.importeFactura * _deduccion) / 100;
 			}
 		}
 
 	}
 
 
-}
+	public class DeduccionPorCliente:ADeduccion
+	{
+		private decimal _deduccion = 10;
+		private decimal _deduccion_vip = 50;
 
+		public DeduccionPorCliente(Factura factura):base(factura)
+		{
+		}
+
+		override public decimal CalcularDeduccion()
+		{
+			switch (factura.tCliente)
+			{
+			case TipoCliente.ClienteNormal:
+				return ((factura.importeFactura * _deduccion) / 100);
+				break;
+			case TipoCliente.ClienteVIP:
+				return ((factura.importeFactura * _deduccion_vip) / 100);
+				break;
+			default:
+				return 0;
+				break;
+			}
+
+		}
+
+	}
+}

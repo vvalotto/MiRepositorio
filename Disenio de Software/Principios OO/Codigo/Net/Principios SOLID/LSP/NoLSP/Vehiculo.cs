@@ -59,16 +59,16 @@ namespace NoLSP
         {
             
             //Con el problema de violación al LSP
-            //string matricula = ((Coche)vehiculo).ObtenerMatricula();
-            //ServicioCalculoImpuestos(matricula, vehiculo.Cilindrada);
+            string matricula = ((Coche)vehiculo).ObtenerMatricula();
+            ServicioCalculoImpuestos(matricula, vehiculo.Cilindrada);
 
             //Solución, pero con violación al OCP
-            string matricula = string.Empty;
-            if (vehiculo.GetType().Name == "Coche")
-                matricula = ((Coche)vehiculo).ObtenerMatricula();
-            else if (vehiculo.GetType().Name == "Ciclomotor")
-                matricula = ((Ciclomotor)vehiculo).ObtenerNumLicencia();
-            ServicioCalculoImpuestos(matricula, vehiculo.Cilindrada);
+			//string matricula = string.Empty;
+			//if (vehiculo.GetType().Name == "Coche")
+			//    matricula = ((Coche)vehiculo).ObtenerMatricula();
+			//else if (vehiculo.GetType().Name == "Ciclomotor")
+			//    matricula = ((Ciclomotor)vehiculo).ObtenerNumLicencia();
+			//ServicioCalculoImpuestos(matricula, vehiculo.Cilindrada);
         }
 
 

@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DA79AF18-F0E5-422E-B39F-22766590640F}</ProjectGuid>
+    <ProjectGuid>{146E3C76-D761-4B92-B172-C799939183EE}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>LibOCPReglas</RootNamespace>
-    <AssemblyName>LibOCPReglas</AssemblyName>
+    <RootNamespace>SPR.EjemploSenial.Visualizador</RootNamespace>
+    <AssemblyName>SPR.EjemploSenial.Visualizador</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,14 +33,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Deduccion.cs" />
-    <Compile Include="IVA.cs" />
+    <Compile Include="Visualizador.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\LibOCPModelo\LibOCPModelo.csproj">
-      <Project>{F30002C5-CD25-487B-A3DB-A88FA247074C}</Project>
-      <Name>LibOCPModelo</Name>
+    <ProjectReference Include="..\SPR.EjemploSenial.Modelo\SPR.EjemploSenial.Modelo.csproj">
+      <Project>{6C17BDD6-64C5-4D55-8AE7-44D9A1F796E6}</Project>
+      <Name>SPR.EjemploSenial.Modelo</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

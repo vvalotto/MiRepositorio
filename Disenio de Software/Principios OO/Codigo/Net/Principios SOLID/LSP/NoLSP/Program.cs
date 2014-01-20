@@ -31,7 +31,7 @@ namespace NoLSP
             //Console.WriteLine("Base: {0}, Altura: {1}", miCuadrado.Base, miCuadrado.Alto);
             //Console.ReadLine();
 
-            Coche miCoche = new Coche("Citroen", "C4", 2000);
+			Coche miCoche = new Coche("Citroen", "C4", 2000);
             Ciclomotor miMoto = new Ciclomotor("Yamaha", "2008", 450);
             Impuestos miImp = new Impuestos();
 

@@ -12,6 +12,7 @@ namespace LibOCPControlador
     {
 		private ADeduccion deduccion;
 
+
 		public CalculadorFactura(ADeduccion _deduccion)
 		{
 			deduccion = _deduccion;
@@ -27,7 +28,7 @@ namespace LibOCPControlador
 			//3 . Calcular el importe total de la factura, responsabilidad propia de la factura
 
 			// Calculamos la deducción
-			factura.importeDeduccion = deduccion.CalcularDeduccion(factura.importeFactura);
+			factura.importeDeduccion = deduccion.CalcularDeduccion();
 
 			// Calculamos el IVA
 			IVA iva = new IVA();
@@ -39,9 +40,7 @@ namespace LibOCPControlador
 
 		}
 
-
-    }
-
-	
+	}
+ 	
 
 }

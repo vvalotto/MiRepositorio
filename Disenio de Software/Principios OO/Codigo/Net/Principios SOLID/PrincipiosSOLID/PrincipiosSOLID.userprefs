@@ -1,15 +1,19 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LibOCPReglas/Deduccion.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SPR.EjemploSenial.Visualizador/Visualizador.cs">
     <Files>
-      <File FileName="LibOCPControlador/CalculadorFactura.cs" Line="17" Column="4" />
-      <File FileName="LibOCPReglas/Deduccion.cs" Line="59" Column="1" />
-      <File FileName="LibSPRControlador/CalculadorFactura.cs" Line="27" Column="42" />
-      <File FileName="PrincipiosSOLID/Program.cs" Line="20" Column="83" />
+      <File FileName="NoSPR.EjemploSenial/LectorSenial.cs" Line="61" Column="1" />
+      <File FileName="SPR.EjemploSenial.Adquisidor/Adquisidor.cs" Line="12" Column="20" />
+      <File FileName="SOLID.Senial.Consola/Program.cs" Line="30" Column="59" />
+      <File FileName="SPR.EjemploSenial.Modelo/Senial.cs" Line="29" Column="1" />
+      <File FileName="SPR.EjemploSenial.Procesador/Procesador.cs" Line="21" Column="73" />
+      <File FileName="SPR.EjemploSenial.Visualizador/Visualizador.cs" Line="18" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/vvalotto/Documents/MiRepositorio/Disenio de Software/Principios OO/Codigo/Net/Principios SOLID/PrincipiosSOLID/LibOCPModelo/Factura.cs" line="92" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DA79AF18-F0E5-422E-B39F-22766590640F}</ProjectGuid>
+    <ProjectGuid>{543E7D40-F395-494C-8213-7F7463A34107}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>LibOCPReglas</RootNamespace>
-    <AssemblyName>LibOCPReglas</AssemblyName>
+    <RootNamespace>OCP.EjemploSenial.Adquisidor</RootNamespace>
+    <AssemblyName>OCP.EjemploSenial.Adquisidor</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,14 +33,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Deduccion.cs" />
-    <Compile Include="IVA.cs" />
+    <Compile Include="Adquisidor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\LibOCPModelo\LibOCPModelo.csproj">
-      <Project>{F30002C5-CD25-487B-A3DB-A88FA247074C}</Project>
-      <Name>LibOCPModelo</Name>
+    <ProjectReference Include="..\OCP.EjemploSenial.Modelo\OCP.EjemploSenial.Modelo.csproj">
+      <Project>{A1729AF0-40E5-473D-8462-0660B525277D}</Project>
+      <Name>OCP.EjemploSenial.Modelo</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

@@ -2,6 +2,8 @@ using System;
 
 namespace LibOCPModelo
 {
+	public enum TipoCliente {ClienteVIP, ClienteNormal};
+
 	public class Factura
 	{
 		public Factura(){
@@ -15,6 +17,7 @@ namespace LibOCPModelo
 		private decimal _importeDeduccion;
 		private decimal _importeTotal;
 		private ushort _porcentajeDeduccion;
+		private TipoCliente _tCliente;
 
 
 		//Propiedades de la clase (en este caso todos lo atributos son expuestos
@@ -81,8 +84,19 @@ namespace LibOCPModelo
 				_porcentajeDeduccion = value;
 			}
 		}
+
+		public TipoCliente tCliente {
+			get {
+				return _tCliente;
+			}
+			set {
+				_tCliente = value;
+			}
+		}
 		#endregion 
 
 	}
+	
+
 }
 

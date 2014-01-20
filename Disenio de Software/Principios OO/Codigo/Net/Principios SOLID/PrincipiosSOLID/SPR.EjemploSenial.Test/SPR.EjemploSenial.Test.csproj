@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DA79AF18-F0E5-422E-B39F-22766590640F}</ProjectGuid>
+    <ProjectGuid>{521285F3-FB99-4C1D-A6C0-FAD285EFEE30}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>LibOCPReglas</RootNamespace>
-    <AssemblyName>LibOCPReglas</AssemblyName>
+    <RootNamespace>SPR.EjemploSenial.Test</RootNamespace>
+    <AssemblyName>SPR.EjemploSenial.Test</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,17 +30,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Deduccion.cs" />
-    <Compile Include="IVA.cs" />
+    <Compile Include="Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\LibOCPModelo\LibOCPModelo.csproj">
-      <Project>{F30002C5-CD25-487B-A3DB-A88FA247074C}</Project>
-      <Name>LibOCPModelo</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
