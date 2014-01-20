@@ -1,7 +1,7 @@
 using System;
 using OCP.EjemploSenial.Modelo;
 
-namespace OCP.EjemploSenial.Procesador
+namespace OCP.EjemploSenial.AbstractProcesador
 {
 
 	/*Para OCP 

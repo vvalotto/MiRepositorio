@@ -22,14 +22,19 @@ namespace LSP.EjemploSenial.ModeloMejorado
 
 		public abstract void PonerValor (decimal valor);
 
+        public abstract decimal SacarValor ();
 
-		public abstract int CantidadValores ();
+	    public decimal ObtenerValor(int indice)
+        {
+			return (decimal)this._valores [indice];
+		}
 
+        public void Limpiar()
+        {
+            this._valores.Clear();
+        }
 
-		public abstract decimal ObtenerValor (int indice);
-
-
-		public abstract decimal SacarValor ();
+        public abstract int CantidadValores();
 
 	}
 
@@ -80,16 +85,10 @@ namespace LSP.EjemploSenial.ModeloMejorado
 			return _valor;
 		}
 
-		public override decimal ObtenerValor (int indice)
-		{
-			throw new NotImplementedException ();
-		}
-
 		public override int CantidadValores ()
 		{
-			throw new NotImplementedException ();
+			return this._valores.Count;
 		}
-
 
 	}
 
@@ -159,16 +158,16 @@ namespace LSP.EjemploSenial.ModeloMejorado
 			return _valor;
 		}
 
-		public override decimal ObtenerValor (int indice)
-		{
-			throw new NotImplementedException ();
-		}
-
 		public override int CantidadValores ()
 		{
-			throw new NotImplementedException ();
-		}
-
+            if (_pfinal > _pinicial)
+            {
+                return _pfinal - _pinicial;
+		    }
+            else
+            {
+                return _pfinal - _pinicial + _tamanio;
+            }
 	}
 
 

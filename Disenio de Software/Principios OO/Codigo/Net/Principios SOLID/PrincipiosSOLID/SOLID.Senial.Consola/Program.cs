@@ -4,15 +4,15 @@ using SPR.EjemploSenial.Adquisidor;
 using SPR.EjemploSenial.Procesador;
 using SPR.EjemploSenial.Visualizador;*/
 
-/*using OCP.EjemploSenial.Modelo;
+using OCP.EjemploSenial.Modelo;
 using OCP.EjemploSenial.Adquisidor;
 using OCP.EjemploSenial.Procesador;
-using OCP.EjemploSenial.Visualizador;*/
+using OCP.EjemploSenial.Visualizador;
 
-using LSP.EjemploSenial.Modelo;
+/*using LSP.EjemploSenial.Modelo;
 using LSP.EjemploSenial.Adquisidor;
 using LSP.EjemploSenial.Procesador;
-using LSP.EjemploSenial.Visualizador;
+using LSP.EjemploSenial.Visualizador;*/
 
 namespace SOLID.Tratamiento.Consola
 {
@@ -56,21 +56,21 @@ namespace SOLID.Tratamiento.Consola
 
 
 
-			/*OC
+			/*OCP*/
 			Senial senialAdquirida = new Senial ();
 			Senial senialProcesada = new Senial ();
-			AdquisidorArchivo adquisidor = new AdquisidorArchivo (senialAdquirida);
+			AdquisidorSimple adquisidor = new AdquisidorSimple (senialAdquirida);
 			ProcesadorDiferencial procesador = new ProcesadorDiferencial ();
 			Visualizador visualizador = new Visualizador ();
 
 			Console.WriteLine ("Iniciando");
-			adquisidor.ubicacion = "/Users/vvalotto/Documents/Temp/datos.txt";
+			/*adquisidor.ubicacion = "/Users/vvalotto/Documents/Temp/datos.txt";*/
 			adquisidor.LeerSenial ();
 
 			Console.WriteLine ("Se han adquirido:");
 			Console.WriteLine (senialAdquirida.CantidadValores ().ToString());
 
-			senialProcesada = procesador.Procesar (senialAdquirida);
+			procesador.Procesar (senialAdquirida, senialProcesada);
 
 			Console.WriteLine ("Señal Adquirida con fecha: {0}", senialAdquirida.fecha_adquisicion.ToString());
 			visualizador.MostrarValores (senialAdquirida);
@@ -78,9 +78,9 @@ namespace SOLID.Tratamiento.Consola
 			visualizador.MostrarValores (senialProcesada);
 
 			Console.ReadLine ();
-			Fin OC^P*/
+		    /*	Fin OCP*/
 
-			SenialPila senialAdquirida = new SenialPila (5);
+			/*SenialPila senialAdquirida = new SenialPila (5);
 			Senial senialProcesada = new SenialCola (5);
 			AdquisidorArchivo adquisidor = new AdquisidorArchivo (senialAdquirida);
 			ProcesadorDiferencial procesador = new ProcesadorDiferencial ();
@@ -103,7 +103,7 @@ namespace SOLID.Tratamiento.Consola
 			Console.ReadLine ();
 			Console.Clear ();
 			Console.WriteLine(senialAdquirida.SacarValor().ToString());
-			visualizador.MostrarValores (senialAdquirida);
+			visualizador.MostrarValores (senialAdquirida);*/
 
 		}
 	}
