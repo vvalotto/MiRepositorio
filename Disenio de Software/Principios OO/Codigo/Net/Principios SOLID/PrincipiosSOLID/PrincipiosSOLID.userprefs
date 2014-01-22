@@ -1,13 +1,8 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SPR.EjemploSenial.Visualizador/Visualizador.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LSP.EjemploSenial.Modelo/SenialMejorada.cs">
     <Files>
-      <File FileName="NoSPR.EjemploSenial/LectorSenial.cs" Line="61" Column="1" />
-      <File FileName="SPR.EjemploSenial.Adquisidor/Adquisidor.cs" Line="12" Column="20" />
-      <File FileName="SOLID.Senial.Consola/Program.cs" Line="30" Column="59" />
-      <File FileName="SPR.EjemploSenial.Modelo/Senial.cs" Line="29" Column="1" />
-      <File FileName="SPR.EjemploSenial.Procesador/Procesador.cs" Line="21" Column="73" />
-      <File FileName="SPR.EjemploSenial.Visualizador/Visualizador.cs" Line="18" Column="5" />
+      <File FileName="LSP.EjemploSenial.Modelo/SenialMejorada.cs" Line="127" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

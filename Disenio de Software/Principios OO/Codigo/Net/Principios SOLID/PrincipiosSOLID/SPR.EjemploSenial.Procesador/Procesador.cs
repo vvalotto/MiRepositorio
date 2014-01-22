@@ -24,6 +24,7 @@ namespace SPR.EjemploSenial.Procesador
 			return _senialProcesada;
 		}
 
+		/*
 		public Senial ProcesarConUmbral(Senial senial)
 		{
 			Console.WriteLine ();
@@ -39,6 +40,7 @@ namespace SPR.EjemploSenial.Procesador
 			Console.WriteLine ("Fin proceso!");
 			return _senialProcesada;
 		}
+		*/
 
 	}
 }

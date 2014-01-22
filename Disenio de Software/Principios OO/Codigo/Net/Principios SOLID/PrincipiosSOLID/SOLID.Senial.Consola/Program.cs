@@ -20,16 +20,32 @@ namespace SOLID.Tratamiento.Consola
 	{
 		public static void Main (string[] args)
 		{
-			/* No SPR
-			LectorSenial senial = new LectorSenial ();
 
-			Console.WriteLine ("Iniciando");
-			senial.LeerSenial ();
-			senial.ProcesarSenial ();
-			senial.MostrarSenial ();
+			string _opcion = "99";
+			/* Menu de Entrada */
+			while (_opcion != "0") {
+				Console.WriteLine ("Seleccion de demostraciones");
+				Console.WriteLine ();
+				Console.WriteLine ("> 1 . Ejemplo NO SRP");
+				Console.WriteLine ("> 2 . Ejemplo SPR");
 
-			Console.ReadLine ();
-			*/
+				Console.Write ("Seleccione una opcion:");
+				_opcion = Console.ReadLine ();
+
+				switch (_opcion) {
+				case "1": 
+					ProgramaNoSRP ejemNOSRP = new ProgramaNoSRP ();
+					ejemNOSRP.Ejecutar ();
+					break;
+				case "2": 
+					ProgramaSRP ejemSRP = new ProgramaSRP ();
+					ejemSRP.Ejecutar ();
+					break;
+
+				}
+
+			}
+
 
 			/*SPR
 			Senial senialAdquirida = new Senial ();
@@ -56,7 +72,7 @@ namespace SOLID.Tratamiento.Consola
 
 
 
-			/*OCP*/
+			/*OCP
 			Senial senialAdquirida = new Senial ();
 			Senial senialProcesada = new Senial ();
 			AdquisidorSimple adquisidor = new AdquisidorSimple (senialAdquirida);
@@ -64,7 +80,7 @@ namespace SOLID.Tratamiento.Consola
 			Visualizador visualizador = new Visualizador ();
 
 			Console.WriteLine ("Iniciando");
-			/*adquisidor.ubicacion = "/Users/vvalotto/Documents/Temp/datos.txt";*/
+			adquisidor.ubicacion = "/Users/vvalotto/Documents/Temp/datos.txt";
 			adquisidor.LeerSenial ();
 
 			Console.WriteLine ("Se han adquirido:");
@@ -104,6 +120,10 @@ namespace SOLID.Tratamiento.Consola
 			Console.Clear ();
 			Console.WriteLine(senialAdquirida.SacarValor().ToString());
 			visualizador.MostrarValores (senialAdquirida);*/
+
+
+			Console.WriteLine ("Fin");
+			Console.ReadLine ();
 
 		}
 	}
