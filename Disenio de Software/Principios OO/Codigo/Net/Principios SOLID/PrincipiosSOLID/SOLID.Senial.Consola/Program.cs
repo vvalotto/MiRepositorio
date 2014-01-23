@@ -57,7 +57,9 @@ namespace SOLID.Tratamiento.Consola
 						ejemOCP.Ejecutar ();
 						break;
 				case "5": 
-					ProgramaNoLSP ejemNoLSP = new ProgramaNoLSP ();
+                        Console.Clear();
+                        Console.WriteLine("Ejmeplo NO SRP");
+					    ProgramaNoLSP ejemNoLSP = new ProgramaNoLSP ();
 						ejemNoLSP.Ejecutar ();
 						break;
 

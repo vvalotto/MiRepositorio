@@ -17,7 +17,6 @@ namespace LSP.EjemploSenial.ModeloAnt
 				return _fecha_adquisicion;
 			}
 		}
-		/*-----------------------------------*/
 
 		public Senial ()
 		{

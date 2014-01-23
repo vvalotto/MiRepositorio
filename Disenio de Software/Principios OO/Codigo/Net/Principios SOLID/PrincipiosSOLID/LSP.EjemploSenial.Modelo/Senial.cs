@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace LSP.EjemploSenial.Modelo
 {
-	public class Senial
+	public partial class Senial
 	{
 		protected ArrayList _valores = new ArrayList();
 		private DateTime _fecha_adquisicion;
@@ -20,7 +20,7 @@ namespace LSP.EjemploSenial.Modelo
 			_fecha_adquisicion = DateTime.Now;
 		}
 
-		public void PonerValor(decimal valor){
+	    public virtual void PonerValor(decimal valor){
 			this._valores.Add (valor);
 		}
 
@@ -84,11 +84,25 @@ namespace LSP.EjemploSenial.Modelo
 			_tope = 0;
 		}
 
-		public void AgregarValor(decimal valor)
+		public override void PonerValor(decimal valor)
 		{
-			this.PonerValor (valor);
-			_tope++;
-			Console.WriteLine(_tope.ToString());
+            try
+            {
+                if (_tope != _tamanio)
+                {
+                    base.PonerValor(valor);
+                    _tope++;
+                  }
+                else
+                {
+                    throw new System.InvalidOperationException("No se puede poner mas datos");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
 		}
 
 		public decimal SacarValor ()
@@ -120,25 +134,33 @@ namespace LSP.EjemploSenial.Modelo
 			int _tamanio;
 			int _pinicial;
 			int _final;
+            int _largo;
 
 			public SenialCola(int tamanio)
 			{
 				_tamanio = tamanio;
+                _largo = 0;
 				_pinicial = 0;
-				_final = 0;
+				_final = 1;
 			}
 
-			public void AgregarValor(decimal valor)
+			public override void PonerValor(decimal valor)
 			{
+                try
+                 {
+					 base.PonerValor (valor);
+					 if (_final == _tamanio) {
+						 _final = 0;
+					 } else {
+						 _final++;
+					  }
+                      _largo++;
+                 }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
 
-				if (_final != _pinicial) { 
-					base.PonerValor (valor);
-					if (_final == _tamanio) {
-						_final = 0;
-					} else {
-						_final++;
-					}
-				}
 			}
 
 			public decimal SacarValor ()
@@ -146,7 +168,7 @@ namespace LSP.EjemploSenial.Modelo
 				decimal _valor = 0;
 
 				try{
-					if (_tamanio != 0) {
+					if (_largo != 0) {
 						if (_pinicial == (_tamanio - 1)){
 							_valor = base.ObtenerValor (_tamanio - 1 );
 							_valores.RemoveAt (_tamanio - 1);
@@ -154,9 +176,10 @@ namespace LSP.EjemploSenial.Modelo
 						}
 						else{
 							_valor = base.ObtenerValor (_pinicial);
-							_valores.RemoveAt (_pinicial- 1);
+							_valores.RemoveAt (_pinicial);
 							_pinicial++;
 						}
+                        _largo--;
 					}
 					else
 					{

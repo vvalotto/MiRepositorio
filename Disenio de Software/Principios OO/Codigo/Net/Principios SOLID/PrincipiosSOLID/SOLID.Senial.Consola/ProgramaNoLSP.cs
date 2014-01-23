@@ -15,25 +15,30 @@ namespace SOLID.Tratamiento.Consola
 
 		public void Ejecutar(){
 
-			SenialPila senialAdquirida = new SenialPila (5);
-			Senial senialProcesada = new SenialCola (5);
+            /*Caso 1*/
+            /*Senial senialAdquirida = new Senial(5);*/
+            /*Caso 2*/
+            /*SenialPila senialAdquirida = new SenialPila (5);*/
+            /*Caso 3*/
+            SenialCola senialAdquirida = new SenialCola(5);
+			Senial senialProcesada = new Senial ();
 			AdquisidorArchivo adquisidor = new AdquisidorArchivo (senialAdquirida);
 			ProcesadorDiferencial procesador = new ProcesadorDiferencial ();
 			Visualizador visualizador = new Visualizador ();
 
-			Console.WriteLine ("Iniciando");
-			adquisidor.ubicacion = "/Users/vvalotto/Documents/Temp/datos.txt";
+            Console.WriteLine ("Iniciando Adquisicion");
+			adquisidor.ubicacion = "c:/Temp/datos.txt";
 			adquisidor.LeerSenial ();
 
-			Console.WriteLine ("Se han adquirido:");
-			Console.WriteLine (senialAdquirida.CantidadValores().ToString());
+			Console.Write ("Se han adquirido: {0} datos", senialAdquirida.CantidadValores().ToString());
+			Console.WriteLine ();
 
-			/*procesador.Procesar (senialAdquirida, senialProcesada);
+			procesador.Procesar (senialAdquirida, senialProcesada);
 
 			Console.WriteLine ("Señal Adquirida con fecha: {0}", senialAdquirida.fecha_adquisicion.ToString());
 			visualizador.MostrarValores (senialAdquirida);
 			Console.WriteLine ("Señal Procesada");
-			visualizador.MostrarValores (senialProcesada);*/
+			visualizador.MostrarValores (senialProcesada);
 
 			Console.ReadLine ();
 

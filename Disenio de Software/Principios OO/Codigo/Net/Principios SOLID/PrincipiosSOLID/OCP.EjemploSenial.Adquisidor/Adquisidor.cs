@@ -26,7 +26,6 @@ namespace OCP.EjemploSenial.Adquisidor
 
 		protected abstract decimal LeerDatoEntrada ();
 
-
 		public abstract void LeerSenial ();
 
 	}
