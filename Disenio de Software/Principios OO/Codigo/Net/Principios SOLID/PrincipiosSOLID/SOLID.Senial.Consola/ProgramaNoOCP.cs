@@ -23,13 +23,13 @@ namespace SOLID.Tratamiento.Consola
 			Procesador procesador = new Procesador ();
 			Visualizador visualizador = new Visualizador ();
 
-			/*	dquiere Señal */
+			/*	Adquiere Señal */
 			Console.WriteLine ("Iniciando");
 			adquisidor.LeerSenial ();
 			Console.WriteLine ("Se han adquirido:");
 			Console.WriteLine (senialAdquirida.CantidadValores ().ToString());
 
-			/*Procesa Señal: aqui tiene impacto ya debe cambiarse el metodo al que llama*/
+			/*Procesa Señal: aqui tiene impacto ya que debe cambiarse el metodo al que llama*/
 			senialProcesada = procesador.Procesar (senialAdquirida);
 			/*senialProcesada = procesador.ProcesarConUmbral (senialAdquirida);*/
 

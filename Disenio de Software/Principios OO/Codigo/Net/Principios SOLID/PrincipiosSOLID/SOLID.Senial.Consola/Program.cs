@@ -1,8 +1,8 @@
 using System;
-using SPR.EjemploSenial.Modelo;
+/*using SPR.EjemploSenial.Modelo;
 using SPR.EjemploSenial.Adquisidor;
 using SPR.EjemploSenial.Procesador;
-using SPR.EjemploSenial.Visualizador;
+using SPR.EjemploSenial.Visualizador;*/
 
 /*using OCP.EjemploSenial.Modelo;
 using OCP.EjemploSenial.Adquisidor;
@@ -29,17 +29,20 @@ namespace SOLID.Tratamiento.Consola
 				Console.WriteLine ();
 				Console.WriteLine ("> 1 . Ejemplo NO SRP");
 				Console.WriteLine ("> 2 . Ejemplo SPR");
-				Console.WriteLine ("> 3. Ejemplo No OCP");
+				Console.WriteLine ("> 3 . Ejemplo No OCP");
+                Console.WriteLine ("> 4 . Ejemplo OCP");
 			
 
 				Console.Write ("Seleccione una opcion:");
 				_opcion = Console.ReadLine ();
 
 				switch (_opcion) {
-				case "1": 
-					ProgramaNoSRP ejemNOSRP = new ProgramaNoSRP ();
-					ejemNOSRP.Ejecutar ();
-					break;
+                    case "1":
+                        Console.Clear();
+                        Console.WriteLine("Ejmeplo NO SRP");
+					    ProgramaNoSRP ejemNOSRP = new ProgramaNoSRP ();
+					    ejemNOSRP.Ejecutar ();
+					    break;
 				case "2": 
 					ProgramaSRP ejemSRP = new ProgramaSRP ();
 					ejemSRP.Ejecutar ();
@@ -47,6 +50,10 @@ namespace SOLID.Tratamiento.Consola
 				case "3": 
 					ProgramaNoOCP ejemNoOCP = new ProgramaNoOCP ();
 					ejemNoOCP.Ejecutar ();
+					break;
+                case "4": 
+					ProgramaNoOCP ejemOCP = new ProgramaNoOCP ();
+					ejemOCP.Ejecutar ();
 					break;
 
 				}

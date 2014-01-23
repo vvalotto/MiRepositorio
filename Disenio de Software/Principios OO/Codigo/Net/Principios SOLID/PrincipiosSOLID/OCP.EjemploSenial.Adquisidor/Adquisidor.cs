@@ -7,7 +7,7 @@ namespace OCP.EjemploSenial.Adquisidor
 	/*Para OCP 
 	 * Se refactoriza la clase de manera de extender otros tipos de 
 	 * funciones de adquisicion de datos sin que impacte en los anteriores programas
-	 * o que cambiando solo las clase de alto nivel se pueda "armar" la solucion */
+	 * o que cambiando solo las clases de alto nivel que puedan "armar" la solucion */
 
 
 	public abstract class Adquisidor
