@@ -1,7 +1,7 @@
 using System;
 using OCP.EjemploSenial.Modelo;
 
-namespace SPR.EjemploSenial.Procesador
+namespace OCP.EjemploSenial.Procesador
 {
 	public class Procesador
 	{
@@ -24,7 +24,7 @@ namespace SPR.EjemploSenial.Procesador
 			return _senialProcesada;
 		}
 
-		/*
+
 		public Senial ProcesarConUmbral(Senial senial)
 		{
 			Console.WriteLine ();
@@ -40,7 +40,7 @@ namespace SPR.EjemploSenial.Procesador
 			Console.WriteLine ("Fin proceso!");
 			return _senialProcesada;
 		}
-		*/
+
 
 	}
 }

@@ -1,13 +1,14 @@
 using System;
-/*using SPR.EjemploSenial.Modelo;
+using SPR.EjemploSenial.Modelo;
 using SPR.EjemploSenial.Adquisidor;
 using SPR.EjemploSenial.Procesador;
-using SPR.EjemploSenial.Visualizador;*/
+using SPR.EjemploSenial.Visualizador;
 
-using OCP.EjemploSenial.Modelo;
+/*using OCP.EjemploSenial.Modelo;
 using OCP.EjemploSenial.Adquisidor;
 using OCP.EjemploSenial.Procesador;
 using OCP.EjemploSenial.Visualizador;
+*/
 
 /*using LSP.EjemploSenial.Modelo;
 using LSP.EjemploSenial.Adquisidor;
@@ -28,6 +29,8 @@ namespace SOLID.Tratamiento.Consola
 				Console.WriteLine ();
 				Console.WriteLine ("> 1 . Ejemplo NO SRP");
 				Console.WriteLine ("> 2 . Ejemplo SPR");
+				Console.WriteLine ("> 3. Ejemplo No OCP");
+			
 
 				Console.Write ("Seleccione una opcion:");
 				_opcion = Console.ReadLine ();
@@ -41,34 +44,14 @@ namespace SOLID.Tratamiento.Consola
 					ProgramaSRP ejemSRP = new ProgramaSRP ();
 					ejemSRP.Ejecutar ();
 					break;
+				case "3": 
+					ProgramaNoOCP ejemNoOCP = new ProgramaNoOCP ();
+					ejemNoOCP.Ejecutar ();
+					break;
 
 				}
 
 			}
-
-
-			/*SPR
-			Senial senialAdquirida = new Senial ();
-			Senial senialProcesada = new Senial ();
-			Adquisidor adquisidor = new Adquisidor (senialAdquirida);
-			Procesador procesador = new Procesador ();
-			Visualizador visualizador = new Visualizador ();
-
-			Console.WriteLine ("Iniciando");
-			adquisidor.LeerSenial ();
-
-			Console.WriteLine ("Se han adquirido:");
-			Console.WriteLine (senialAdquirida.CantidadValores ().ToString());
-
-			senialProcesada = procesador.Procesar (senialAdquirida);
-
-			Console.WriteLine ("Señal Adquirida");
-			visualizador.MostrarValores (senialAdquirida);
-			Console.WriteLine ("Señal Procesada");
-			visualizador.MostrarValores (senialProcesada);
-
-			Console.ReadLine ();
-			*/
 
 
 

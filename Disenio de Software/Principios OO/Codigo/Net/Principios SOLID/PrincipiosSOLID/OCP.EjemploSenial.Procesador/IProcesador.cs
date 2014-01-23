@@ -6,6 +6,10 @@ using OCP.EjemploSenial.Modelo;
 
 namespace OCP.EjemploSenial.Procesador
 {
+	/*Para OCP 
+	 * Se refactoriza la clase de manera de extender otros tipos de 
+	 * funciones procesamiento sin que impacte en los anteriores programas
+	 * o que cambiando solo las clase de alto nivel se pueda "armar" la solucion */
     interface IProcesador
     {
         void Procesar(Senial senialAdquirida, Senial senialProcesada);
