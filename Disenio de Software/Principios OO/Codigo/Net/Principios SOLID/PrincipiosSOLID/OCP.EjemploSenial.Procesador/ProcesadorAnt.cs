@@ -1,5 +1,5 @@
 using System;
-using SPR.EjemploSenial.Modelo;
+using OCP.EjemploSenial.Modelo;
 
 namespace SPR.EjemploSenial.Procesador
 {
@@ -11,7 +11,6 @@ namespace SPR.EjemploSenial.Procesador
 			_senialProcesada = new Senial ();
 		}
 
-        
 		public Senial Procesar(Senial senial)
 		{
 
@@ -25,10 +24,7 @@ namespace SPR.EjemploSenial.Procesador
 			return _senialProcesada;
 		}
 
-		/* Se quiere agregar otro tipo de procesamiento, como metodo, pero se 
-         * cambia la clase. Si bien por la separacion de intereses solo
-         * se cambia el modulo del procesador sin impacto en el resto, si quiero usar
-         * esta nuevo procesamiento tengo que cambiar el cliente, con la llamada la método*/
+		/*
 		public Senial ProcesarConUmbral(Senial senial)
 		{
 			Console.WriteLine ();
@@ -44,7 +40,7 @@ namespace SPR.EjemploSenial.Procesador
 			Console.WriteLine ("Fin proceso!");
 			return _senialProcesada;
 		}
-		
+		*/
 
 	}
 }
