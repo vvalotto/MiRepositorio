@@ -2,9 +2,17 @@ using System;
 using System.Collections;
 using System.Reflection;
 
-namespace LSP.EjemploSenial.ModeloMejorado
+namespace LSP.EjemploSenial.ISenial
 {
-	public abstract class SenialMejorada
+	
+    public interface ISenial
+    {
+		void PonerValor (decimal valor);
+        int CantidadValores();
+        decimal SacarValor ();
+    }        
+    
+    public abstract class SenialMejorada:ISenial
 	{
 		protected ArrayList _valores = new ArrayList();
 		private DateTime _fecha_adquisicion;
@@ -20,10 +28,6 @@ namespace LSP.EjemploSenial.ModeloMejorado
 			_fecha_adquisicion = DateTime.Now;
 		}
 
-		public abstract void PonerValor (decimal valor);
-
-        public abstract decimal SacarValor ();
-
 	    public decimal ObtenerValor(int indice)
         {
 			return (decimal)this._valores [indice];
@@ -34,9 +38,23 @@ namespace LSP.EjemploSenial.ModeloMejorado
             this._valores.Clear();
         }
 
-        public abstract int CantidadValores();
+        public virtual void PonerValor(decimal valor)
+        {
+            throw new NotImplementedException();
+        }
 
-	}
+        public virtual int CantidadValores()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual decimal SacarValor()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
 
 	public class SenialPila : SenialMejorada
 	{
@@ -92,7 +110,7 @@ namespace LSP.EjemploSenial.ModeloMejorado
 
 	}
 
-    public class SenialCola : SenialMejorada
+    /*public class SenialCola : SenialMejorada
     {
         int _tamanio;
         int _pinicial;
@@ -179,7 +197,7 @@ namespace LSP.EjemploSenial.ModeloMejorado
             }
         }
 
-    }
+    }*/
 
 }
 

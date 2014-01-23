@@ -35,6 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramaLSP.cs" />
     <Compile Include="ProgramaOCP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProgramaNoSRP.cs" />

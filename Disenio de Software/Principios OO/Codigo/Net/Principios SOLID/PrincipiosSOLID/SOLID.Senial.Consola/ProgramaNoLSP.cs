@@ -16,11 +16,11 @@ namespace SOLID.Tratamiento.Consola
 		public void Ejecutar(){
 
             /*Caso 1*/
-            /*Senial senialAdquirida = new Senial(5);*/
+            /*Senial senialAdquirida = new Senial();*/
             /*Caso 2*/
-            /*SenialPila senialAdquirida = new SenialPila (5);*/
+            SenialPila senialAdquirida = new SenialPila (5);
             /*Caso 3*/
-            SenialCola senialAdquirida = new SenialCola(5);
+            /*SenialCola senialAdquirida = new SenialCola(5);*/
 			Senial senialProcesada = new Senial ();
 			AdquisidorArchivo adquisidor = new AdquisidorArchivo (senialAdquirida);
 			ProcesadorDiferencial procesador = new ProcesadorDiferencial ();

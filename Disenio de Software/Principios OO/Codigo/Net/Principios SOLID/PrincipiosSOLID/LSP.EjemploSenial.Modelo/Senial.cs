@@ -20,11 +20,11 @@ namespace LSP.EjemploSenial.Modelo
 			_fecha_adquisicion = DateTime.Now;
 		}
 
-	    public virtual void PonerValor(decimal valor){
+	    /*public void PonerValor(decimal valor){
 			this._valores.Add (valor);
-		}
+		}*/
 
-		/*public void PonerValor(decimal valor){
+		public virtual void PonerValor(decimal valor){
 
 			int _indice = 0;
 
@@ -32,9 +32,14 @@ namespace LSP.EjemploSenial.Modelo
 			Type _miTipo = typeof(Senial);
 			_miFieldInfo = _miTipo.GetFields(BindingFlags.NonPublic | BindingFlags.Instance| BindingFlags.Public);
 
-			if (this.GetType ().Name == "SenialPila") {
+
+            if (this.GetType().Name == "Senial") {
+                this._valores.Add(valor);
+            }
+            else if (this.GetType ().Name == "SenialPila") {
 				this._valores.Add (valor);
-			} else if (this.GetType ().Name == "SenialCola") {
+			} 
+            else if (this.GetType ().Name == "SenialCola") {
 				for (int i = 0; i < _miFieldInfo.Length; i++) {
 					if (_miFieldInfo [i].Name == "_ifinal") { 
 						_indice = (int)_miFieldInfo [i].GetValue(null);
@@ -43,7 +48,7 @@ namespace LSP.EjemploSenial.Modelo
 				this._valores.Insert (_indice, valor);
 			}
 		}
-		*/
+		
 
 		public int CantidadValores ()
 		{
