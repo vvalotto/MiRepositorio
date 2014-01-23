@@ -67,6 +67,7 @@ namespace LSP.EjemploSenial.Modelo
 	public class SenialPila : Senial
 	{
 		int _tamanio;
+		int _tope;
 
 		public int tamanio {
 			get {
@@ -80,13 +81,14 @@ namespace LSP.EjemploSenial.Modelo
 		public SenialPila(int tamanio)
 		{
 			_tamanio = tamanio;
+			_tope = 0;
 		}
 
 		public void AgregarValor(decimal valor)
 		{
 			this.PonerValor (valor);
-			_tamanio++;
-
+			_tope++;
+			Console.WriteLine(_tope.ToString());
 		}
 
 		public decimal SacarValor ()
@@ -94,10 +96,10 @@ namespace LSP.EjemploSenial.Modelo
 			decimal _valor = 0;
 
 			try{
-				if (_tamanio != 0) {
-					_valor = base.ObtenerValor (_tamanio - 1);
-					_valores.RemoveAt (_tamanio - 1);
-					_tamanio--;
+				if (_tope != 0) {
+					_valor = base.ObtenerValor (_tope - 1);
+					_valores.RemoveAt (_tope - 1);
+					_tope--;
 				}
 				else
 				{

@@ -134,7 +134,7 @@ namespace LSP.EjemploSenial.ModeloMejorado
 
         }
 
-        public decimal SacarValor()
+		public override decimal SacarValor()
         {
             decimal _valor = 0;
 

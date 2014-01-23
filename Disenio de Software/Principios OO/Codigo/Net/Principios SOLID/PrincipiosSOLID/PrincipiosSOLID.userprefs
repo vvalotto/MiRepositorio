@@ -2,13 +2,13 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="OCP.EjemploSenial.Adquisidor/Adquisidor.cs">
     <Files>
-      <File FileName="SOLID.Senial.Consola/ProgramaSRP.cs" Line="17" Column="1" />
-      <File FileName="SOLID.Senial.Consola/Program.cs" Line="58" Column="3" />
-      <File FileName="SOLID.Senial.Consola/ProgramaNoOCP.cs" Line="17" Column="11" />
-      <File FileName="SOLID.Senial.Consola/ProgramaNoSRP.cs" Line="4" Column="1" />
-      <File FileName="OCP.EjemploSenial.Procesador/ProcesadorAnt.cs" Line="43" Column="3" />
-      <File FileName="OCP.EjemploSenial.Procesador/Procesador.cs" Line="7" Column="1" />
-      <File FileName="OCP.EjemploSenial.Procesador/IProcesador.cs" Line="12" Column="81" />
+      <File FileName="SOLID.Senial.Consola/ProgramaSRP.cs" Line="1" Column="1" />
+      <File FileName="SOLID.Senial.Consola/Program.cs" Line="1" Column="1" />
+      <File FileName="SOLID.Senial.Consola/ProgramaNoOCP.cs" Line="1" Column="1" />
+      <File FileName="SOLID.Senial.Consola/ProgramaNoSRP.cs" Line="1" Column="1" />
+      <File FileName="OCP.EjemploSenial.Procesador/ProcesadorAnt.cs" Line="1" Column="1" />
+      <File FileName="OCP.EjemploSenial.Procesador/Procesador.cs" Line="1" Column="1" />
+      <File FileName="OCP.EjemploSenial.Procesador/IProcesador.cs" Line="1" Column="1" />
       <File FileName="OCP.EjemploSenial.Adquisidor/Adquisidor.cs" Line="13" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>

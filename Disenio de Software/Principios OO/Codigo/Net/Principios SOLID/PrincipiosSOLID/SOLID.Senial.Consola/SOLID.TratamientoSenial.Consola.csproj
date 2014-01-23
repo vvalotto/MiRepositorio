@@ -40,6 +40,7 @@
     <Compile Include="ProgramaNoSRP.cs" />
     <Compile Include="ProgramaSRP.cs" />
     <Compile Include="ProgramaNoOCP.cs" />
+    <Compile Include="ProgramaNoLSP.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -78,6 +79,22 @@
     <ProjectReference Include="..\OCP.EjemploSenial.Visualizador\OCP.EjemploSenial.Visualizador.csproj">
       <Project>{8CF5F43F-754B-446C-9DA1-2DE96E5BB5E3}</Project>
       <Name>OCP.EjemploSenial.Visualizador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSP.EjemploSenial.Adquisidor\LSP.EjemploSenial.Adquisidor.csproj">
+      <Project>{9ACA77C9-CA0B-4B5B-9FE0-BA7796FC2FE8}</Project>
+      <Name>LSP.EjemploSenial.Adquisidor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSP.EjemploSenial.Modelo\LSP.EjemploSenial.Modelo.csproj">
+      <Project>{1CD7C337-97C6-4BFA-9AB4-88B5E9BBC796}</Project>
+      <Name>LSP.EjemploSenial.Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSP.EjemploSenial.Procesador\LSP.EjemploSenial.Procesador.csproj">
+      <Project>{56F9C507-FBE8-423B-AECC-8EFE4EBC0BA5}</Project>
+      <Name>LSP.EjemploSenial.Procesador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSP.EjemploSenial.Visualizador\LSP.EjemploSenial.Visualizador.csproj">
+      <Project>{05104D20-8B48-4FC7-A78A-2CBFE7E98641}</Project>
+      <Name>LSP.EjemploSenial.Visualizador</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

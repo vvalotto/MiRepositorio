@@ -31,6 +31,7 @@ namespace SOLID.Tratamiento.Consola
 				Console.WriteLine ("> 2 . Ejemplo SPR");
 				Console.WriteLine ("> 3 . Ejemplo No OCP");
                 Console.WriteLine ("> 4 . Ejemplo OCP");
+				Console.WriteLine ("> 5. Ejemplo No LSP");
 			
 
 				Console.Write ("Seleccione una opcion:");
@@ -44,17 +45,21 @@ namespace SOLID.Tratamiento.Consola
 					    ejemNOSRP.Ejecutar ();
 					    break;
 				case "2": 
-					ProgramaSRP ejemSRP = new ProgramaSRP ();
-					ejemSRP.Ejecutar ();
-					break;
+						ProgramaSRP ejemSRP = new ProgramaSRP ();
+						ejemSRP.Ejecutar ();
+						break;
 				case "3": 
-					ProgramaNoOCP ejemNoOCP = new ProgramaNoOCP ();
-					ejemNoOCP.Ejecutar ();
-					break;
+						ProgramaNoOCP ejemNoOCP = new ProgramaNoOCP ();
+						ejemNoOCP.Ejecutar ();
+						break;
                 case "4": 
-					ProgramaNoOCP ejemOCP = new ProgramaNoOCP ();
-					ejemOCP.Ejecutar ();
-					break;
+						ProgramaOCP ejemOCP = new ProgramaOCP ();
+						ejemOCP.Ejecutar ();
+						break;
+				case "5": 
+					ProgramaNoLSP ejemNoLSP = new ProgramaNoLSP ();
+						ejemNoLSP.Ejecutar ();
+						break;
 
 				}
 

@@ -33,8 +33,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Senial.cs" />
     <Compile Include="SenialMejorada.cs" />
+    <Compile Include="SenialAnt.cs" />
+    <Compile Include="Senial.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
