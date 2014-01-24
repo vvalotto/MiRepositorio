@@ -28,15 +28,15 @@ namespace ISP.EjemploSenial.Repo
         public void Guardar(Modelo.Senial senial)
         {
             string _linea_dato = "";
-            string _fecha = senial.fecha_adquisicion.ToString();
+			string _fecha = senial.fecha_adquisicion.ToString ("yyyy MMMMM dd");
             string _cantidad = senial.CantidadValores().ToString();
-            string _nombre = _ubicacion + "\\senialbasica - " + _fecha + ".dat";
+			string _nombre = _ubicacion + "/senialbasica - " + _fecha + ".dat";
             StreamWriter _archivo = new StreamWriter(_nombre);
 
             string cabecera = _fecha + ";" + _cantidad;
             _archivo.WriteLine(cabecera);
 
-            for (int i = 1; i > senial.CantidadValores(); i++)
+			for (int i = 1; i < senial.CantidadValores(); i++)
             {
                 _linea_dato = i.ToString() + " - " + senial.ObtenerValor(i - 1).ToString();
                 _archivo.WriteLine(_linea_dato);
@@ -51,12 +51,18 @@ namespace ISP.EjemploSenial.Repo
             throw new NotImplementedException();
         }
 
-        public void Auditar(Modelo.Senial senial)
+		public void Auditar(Modelo.Senial senial, string programa)
         {
-            throw new NotImplementedException();
+			string _nombreAuditor = "Auditor.log";
+			using (StreamWriter auditor = File.AppendText (_nombreAuditor)) {
+				auditor.WriteLine (">--------");
+				auditor.WriteLine (senial.descripcion);
+				auditor.WriteLine (senial.fecha_adquisicion.ToString ());
+				auditor.WriteLine (programa);
+			}
         }
 
-        public void Trazar(Modelo.Senial senial)
+		public void Trazar(Modelo.Senial senial, string mensaje)
         {
             throw new NotImplementedException();
         }

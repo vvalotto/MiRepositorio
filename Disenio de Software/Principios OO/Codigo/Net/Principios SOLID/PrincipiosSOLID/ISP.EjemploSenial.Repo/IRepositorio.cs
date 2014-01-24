@@ -10,9 +10,9 @@ namespace ISP.EjemploSenial.Repo
 
         Senial Recuperar(int id);
 
-        void Auditar(Senial senial);
+		void Auditar(Senial senial, string programa);
 
-        void Trazar(Senial senial);
+		void Trazar(Senial senial, string mensaje);
 
     }
 }

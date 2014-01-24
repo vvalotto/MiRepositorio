@@ -33,7 +33,7 @@ namespace SOLID.Tratamiento.Consola
                 Console.WriteLine ("> 4 . Ejemplo OCP");
 				Console.WriteLine ("> 5 . Ejemplo No LSP");
                 Console.WriteLine ("> 6 . Ejemplo LSP");
-			
+				Console.WriteLine ("> 7 . Ejemplo No LSP");
 
 				Console.Write ("Seleccione una opcion:");
 				_opcion = Console.ReadLine ();
@@ -72,7 +72,7 @@ namespace SOLID.Tratamiento.Consola
                 case "7":
                         Console.Clear();
                         Console.WriteLine("Ejmeplo NO ISP");
-                        ProgramaLSP ejemISP = new ProgramaLSP();
+						ProgramaNoISP ejemISP = new ProgramaNoISP();
                         ejemISP.Ejecutar();
                         break;
 

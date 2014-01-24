@@ -199,7 +199,7 @@ namespace LSP.EjemploSenial.ISenial
 
 			}
 
-		public decimal SacarValor ()
+		public override decimal SacarValor ()
 			{
 				decimal _valor = 0;
 

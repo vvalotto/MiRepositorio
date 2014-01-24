@@ -10,6 +10,17 @@ namespace ISP.EjemploSenial.Modelo
     {
         protected ArrayList _valores = new ArrayList();
         private DateTime _fecha_adquisicion;
+		private string _descripcion;
+		private int _id;
+
+		public int Id {
+			get {
+				return _id;
+			}
+			set {
+				_id = value;
+			}
+		}		 
 
         public DateTime fecha_adquisicion
         {
@@ -18,6 +29,15 @@ namespace ISP.EjemploSenial.Modelo
                 return _fecha_adquisicion;
             }
         }
+
+		public string descripcion {
+			get {
+				return _descripcion;
+			}
+			set {
+				_descripcion = value;
+			}
+		}
 
         public Senial()
         {

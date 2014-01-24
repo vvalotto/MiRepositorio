@@ -21,17 +21,25 @@ namespace SOLID.Tratamiento.Consola
 
             /*Caso 1*/
             SenialBasica senialAdquirida = new SenialBasica();
+			senialAdquirida.descripcion = "Primera Señal";
+			senialAdquirida.Id = 101;
             /*Caso 2*/
             /*SenialPila senialAdquirida = new SenialPila(5);*/
             /*Caso 3*/
             /*SenialCola senialAdquirida = new SenialCola(5);*/
             Senial senialProcesada = new SenialBasica();
+			senialProcesada.descripcion = "Señal Procesada";
+			senialProcesada.Id = 500;
+
             AdquisidorArchivo adquisidor = new AdquisidorArchivo(senialAdquirida);
             ProcesadorDiferencial procesador = new ProcesadorDiferencial();
             Visualizador visualizador = new Visualizador();
-            
+
+			RepositorioArchivo repArchivo = new RepositorioArchivo ("/Users/vvalotto/Documents/Temp");
+			RepositorioXML repXML = new RepositorioXML ("/Users/vvalotto/Documents/Temp");
+
             Console.WriteLine("Iniciando Adquisicion");
-            adquisidor.ubicacion = "c:/Temp/datos.txt";
+			adquisidor.ubicacion = "/Users/vvalotto/Documents/Temp/datos.txt";
             adquisidor.LeerSenial();
 
             Console.Write("Se han adquirido: {0} datos", senialAdquirida.CantidadValores().ToString());
@@ -48,10 +56,18 @@ namespace SOLID.Tratamiento.Consola
 
             Console.Clear();
             Console.Write("Saco el dato: ");
-            Console.WriteLine(senialAdquirida.SacarValor().ToString());
+			Console.WriteLine(senialAdquirida.SacarValor(1).ToString());
             Console.WriteLine("Quedan estos datos :");
             visualizador.MostrarValores(senialAdquirida);
             Console.WriteLine(senialAdquirida.CantidadValores().ToString());
+
+			Console.WriteLine ("Se guarda la señal");
+			repXML.Guardar (senialAdquirida);
+			repXML.Auditar (senialAdquirida, this.GetType ().ToString ());
+			repArchivo.Guardar (senialProcesada);
+			repArchivo.Auditar (senialProcesada, this.GetType ().ToString ());
+
+
 
         }
     }

@@ -28,7 +28,7 @@ namespace SOLID.Tratamiento.Consola
             Visualizador visualizador = new Visualizador();
 
             Console.WriteLine("Iniciando Adquisicion");
-            adquisidor.ubicacion = "c:/Temp/datos.txt";
+			adquisidor.ubicacion = "/Users/vvalotto/Documents/Temp/datos.txt";
             adquisidor.LeerSenial();
 
             Console.Write("Se han adquirido: {0} datos", senialAdquirida.CantidadValores().ToString());
