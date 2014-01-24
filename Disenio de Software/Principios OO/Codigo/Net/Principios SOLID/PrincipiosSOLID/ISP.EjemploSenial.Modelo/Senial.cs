@@ -77,26 +77,6 @@ namespace ISP.EjemploSenial.Modelo
         {
             throw new NotImplementedException();
         }
-
-        public void Guardar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Recuperar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Auditar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Trazar()
-        {
-            throw new NotImplementedException();
-        }
     }
 
     public class SenialBasica : Senial

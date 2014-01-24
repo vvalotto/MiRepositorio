@@ -59,15 +59,21 @@ namespace SOLID.Tratamiento.Consola
 						break;
 				case "5": 
                         Console.Clear();
-                        Console.WriteLine("Ejmeplo NO SRP");
+                        Console.WriteLine("Ejmeplo NO LSP");
 					    ProgramaNoLSP ejemNoLSP = new ProgramaNoLSP ();
 						ejemNoLSP.Ejecutar ();
 						break;
                 case "6":
                         Console.Clear();
-                        Console.WriteLine("Ejmeplo NO SRP");
+                        Console.WriteLine("Ejmeplo LSP");
                         ProgramaLSP ejemLSP = new ProgramaLSP();
                         ejemLSP.Ejecutar();
+                        break;
+                case "7":
+                        Console.Clear();
+                        Console.WriteLine("Ejmeplo NO ISP");
+                        ProgramaLSP ejemISP = new ProgramaLSP();
+                        ejemISP.Ejecutar();
                         break;
 
 				}

@@ -15,14 +15,6 @@ namespace ISP.EjemploSenial.Modelo
 
         decimal SacarValor(int indice);
 
-        void Guardar();
-
-        void Recuperar();
-
-        void Auditar();
-
-        void Trazar();
-
     }        
  
 
