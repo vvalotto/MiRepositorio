@@ -47,23 +47,19 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\ISP.EjemploSenial.Adquisidor\ISP.EjemploSenial.Adquisidor.csproj">
-      <Project>{1db94b9d-dc3c-44a5-9abd-242ba88654a1}</Project>
+      <Project>{1DB94B9D-DC3C-44A5-9ABD-242BA88654A1}</Project>
       <Name>ISP.EjemploSenial.Adquisidor</Name>
     </ProjectReference>
     <ProjectReference Include="..\ISP.EjemploSenial.Modelo\ISP.EjemploSenial.Modelo.csproj">
-      <Project>{5f0531f8-5c73-40c4-aff0-e9256f05e382}</Project>
+      <Project>{5F0531F8-5C73-40C4-AFF0-E9256F05E382}</Project>
       <Name>ISP.EjemploSenial.Modelo</Name>
     </ProjectReference>
     <ProjectReference Include="..\ISP.EjemploSenial.Procesador\ISP.EjemploSenial.Procesador.csproj">
-      <Project>{2e2ecd81-9a63-4585-a2bd-7f67f23b0a9f}</Project>
+      <Project>{2E2ECD81-9A63-4585-A2BD-7F67F23B0A9F}</Project>
       <Name>ISP.EjemploSenial.Procesador</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ISP.EjemploSenial.Repo\ISP.EjemploSenial.Repo.csproj">
-      <Project>{a4d7cbd1-ab0b-472a-9186-9d6da7135da6}</Project>
-      <Name>ISP.EjemploSenial.Repo</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ISP.EjemploSenial.Visualizador\ISP.EjemploSenial.Visualizador.csproj">
-      <Project>{935961fb-2de8-47e4-9221-6460812ea2df}</Project>
+      <Project>{935961FB-2DE8-47E4-9221-6460812EA2DF}</Project>
       <Name>ISP.EjemploSenial.Visualizador</Name>
     </ProjectReference>
     <ProjectReference Include="..\NoSPR.EjemploSenial\NoSPR.EjemploSenial.csproj">
@@ -117,6 +113,10 @@
     <ProjectReference Include="..\LSP.EjemploSenial.Visualizador\LSP.EjemploSenial.Visualizador.csproj">
       <Project>{05104D20-8B48-4FC7-A78A-2CBFE7E98641}</Project>
       <Name>LSP.EjemploSenial.Visualizador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ISP.EjemploSenial.Repo\ISP.EjemploSenial.Repo.csproj">
+      <Project>{8710A8BD-D161-42E1-9967-D7BBEE6E5858}</Project>
+      <Name>ISP.EjemploSenial.Repo</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
