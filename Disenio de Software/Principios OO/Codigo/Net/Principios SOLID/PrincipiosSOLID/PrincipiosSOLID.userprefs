@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="LSP.EjemploSenial.Adquisidor/Adquisidor.cs">
     <Files>
-      <File FileName="SOLID.Senial.Consola/ProgramaNoLSP.cs" Line="45" Column="69" />
-      <File FileName="LSP.EjemploSenial.Modelo/Senial.cs" Line="91" Column="21" />
+      <File FileName="SOLID.Senial.Consola/ProgramaNoLSP.cs" Line="1" Column="1" />
+      <File FileName="LSP.EjemploSenial.Modelo/Senial.cs" Line="1" Column="1" />
       <File FileName="LSP.EjemploSenial.Adquisidor/Adquisidor.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
