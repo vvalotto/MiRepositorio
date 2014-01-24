@@ -8,11 +8,15 @@ namespace LSP.EjemploSenial.ISenial
     public interface ISenial
     {
 		void PonerValor (decimal valor);
+
         int CantidadValores();
+
         decimal SacarValor ();
+
+        decimal SacarValor(int indice);
     }        
     
-    public abstract class SenialMejorada:ISenial
+    public abstract class Senial:ISenial
 	{
 		protected ArrayList _valores = new ArrayList();
 		private DateTime _fecha_adquisicion;
@@ -23,7 +27,7 @@ namespace LSP.EjemploSenial.ISenial
 			}
 		}
 
-		public SenialMejorada ()
+		public Senial ()
 		{
 			_fecha_adquisicion = DateTime.Now;
 		}
@@ -40,138 +44,29 @@ namespace LSP.EjemploSenial.ISenial
 
         public virtual void PonerValor(decimal valor)
         {
-            throw new NotImplementedException();
+            this._valores.Add(valor);
         }
 
         public virtual int CantidadValores()
         {
-            throw new NotImplementedException();
-        }
-
-        public virtual decimal SacarValor()
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-
-
-	public class SenialPila : SenialMejorada
-	{
-		int _tamanio;
-
-		public int tamanio {
-			get {
-				return _tamanio;
-			}
-			set {
-				_tamanio = value;
-			}
-		}
-
-		public SenialPila(int tamanio):base()
-		{
-			_tamanio = tamanio;
-		}
-
-		public override void PonerValor(decimal valor)
-		{
-			this._valores.Add (valor);
-			_tamanio++;
-
-		}
-
-		public override decimal SacarValor ()
-		{
-			decimal _valor = 0;
-
-			try{
-				if (_tamanio != 0) {
-					_valor = base.ObtenerValor (_tamanio - 1);
-					_valores.RemoveAt (_tamanio - 1);
-					_tamanio--;
-				}
-				else
-				{
-					throw new System.InvalidOperationException("No hay nada para sacar");
-				}
-			}
-			catch (Exception e)
-			{
-				Console.WriteLine (e.Message);
-			}
-			return _valor;
-		}
-
-		public override int CantidadValores ()
-		{
-			return this._valores.Count;
-		}
-
-	}
-
-    /*public class SenialCola : SenialMejorada
-    {
-        int _tamanio;
-        int _pinicial;
-        int _pfinal;
-
-        public SenialCola(int tamanio)
-            : base()
-        {
-            _tamanio = tamanio;
-            _pinicial = 0;
-            _pfinal = 0;
-        }
-
-        public override void PonerValor(decimal valor)
-        {
-            try
+            if (this._valores == null)
             {
-                if (_pfinal != _pinicial)
-                {
-                    base._valores.Insert(_pfinal, valor);
-                    if (_pfinal == _tamanio)
-                    {
-                        _pfinal = 0;
-                    }
-                    else
-                    {
-                        _pfinal++;
-                    }
-                }
-                else
-                {
-                    throw new System.InvalidOperationException("No hay lugar para poner");
-                }
+                return 0;
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine(e.Message);
+                return this._valores.Count;
             }
-
         }
 
-		public override decimal SacarValor()
+        public virtual decimal SacarValor(int indice)
         {
             decimal _valor = 0;
-
             try
             {
-                if (_tamanio != 0)
-                {
-                    if (_pinicial == (_tamanio - 1))
-                    {
-                        _valor = base.ObtenerValor(_tamanio - 1);
-                        _valores.RemoveAt(_tamanio - 1);
-                        _pinicial = 0;
-                    }
-                    else
-                    {
-                        _valor = base.ObtenerValor(_pinicial);
-                        _valores.RemoveAt(_pinicial - 1);
-                        _pinicial++;
-                    }
+                if (this._valores.Count != 0){
+                    _valor = this.ObtenerValor(indice);
+                    this._valores.RemoveAt(indice);
                 }
                 else
                 {
@@ -185,6 +80,155 @@ namespace LSP.EjemploSenial.ISenial
             return _valor;
         }
 
+        public virtual decimal SacarValor()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class SenialBasica : Senial
+    {
+        public SenialBasica(): base()
+        {
+
+        }
+    }
+
+	public class SenialPila : Senial
+	{
+		int _tamanio;
+        int _tope;
+
+		public int tamanio {
+			get {
+				return _tamanio;
+			}
+			set {
+				_tamanio = value;
+			}
+		}
+
+		public SenialPila(int tamanio):base()
+		{
+			_tamanio = tamanio;
+            _tope = 0;
+		}
+
+		public override void PonerValor(decimal valor)
+		{
+            try
+            {
+                if (_tope != _tamanio)
+                {
+                    base.PonerValor(valor);
+                    _tope++;
+                }
+                else
+                {
+                    throw new System.InvalidOperationException("No se puede poner mas datos");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+		}
+
+		public override decimal SacarValor ()
+		{
+            decimal _valor = 0;
+
+            try
+            {
+                if (_tope != 0)
+                {
+                    _valor = base.ObtenerValor(_tope - 1);
+                    _valores.RemoveAt(_tope - 1);
+                    _tope--;
+                }
+                else
+                {
+                    throw new System.InvalidOperationException("No hay nada para sacar");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return _valor;
+		}
+
+		public override int CantidadValores ()
+		{
+			return this._valores.Count;
+		}
+
+	}
+
+    public class SenialCola : Senial
+	{
+		int _tamanio;
+		int _pinicial;
+		int _pfinal;
+        int _largo;
+
+		public SenialCola(int tamanio)
+			{
+				_tamanio = tamanio;
+                _largo = 0;
+				_pinicial = 0;
+				_pfinal = 1;
+			}
+
+		public override void PonerValor(decimal valor)
+			{
+                try
+                 {
+					 base.PonerValor (valor);
+					 if (_pfinal == _tamanio) {
+						 _pfinal = 0;
+					 } else {
+						 _pfinal++;
+					  }
+                      _largo++;
+                 }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+			}
+
+		public decimal SacarValor ()
+			{
+				decimal _valor = 0;
+
+				try{
+					if (_largo != 0) {
+						if (_pinicial == (_tamanio - 1)){
+							_valor = base.ObtenerValor (_tamanio - 1 );
+							_valores.RemoveAt (_tamanio - 1);
+							_pinicial = 0;	
+						}
+						else{
+							_valor = base.ObtenerValor (_pinicial);
+							_valores.RemoveAt (_pinicial);
+							_pinicial++;
+						}
+                        _largo--;
+					}
+					else
+					{
+						throw new System.InvalidOperationException("No hay nada para sacar");
+					}
+				}
+				catch (Exception e)
+				{
+					Console.WriteLine (e.Message);
+				}
+				return _valor;
+			}
+
         public override int CantidadValores()
         {
             if (_pfinal > _pinicial)
@@ -197,7 +241,7 @@ namespace LSP.EjemploSenial.ISenial
             }
         }
 
-    }*/
+    }
 
 }
 

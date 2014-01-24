@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using LSP.EjemploSenial.Modelo;
+using LSP.EjemploSenial.ISenial;
 
 namespace LSP.EjemploSenial.Adquisidor
 {

@@ -31,7 +31,8 @@ namespace SOLID.Tratamiento.Consola
 				Console.WriteLine ("> 2 . Ejemplo SPR");
 				Console.WriteLine ("> 3 . Ejemplo No OCP");
                 Console.WriteLine ("> 4 . Ejemplo OCP");
-				Console.WriteLine ("> 5. Ejemplo No LSP");
+				Console.WriteLine ("> 5 . Ejemplo No LSP");
+                Console.WriteLine ("> 6 . Ejemplo LSP");
 			
 
 				Console.Write ("Seleccione una opcion:");
@@ -62,6 +63,12 @@ namespace SOLID.Tratamiento.Consola
 					    ProgramaNoLSP ejemNoLSP = new ProgramaNoLSP ();
 						ejemNoLSP.Ejecutar ();
 						break;
+                case "6":
+                        Console.Clear();
+                        Console.WriteLine("Ejmeplo NO SRP");
+                        ProgramaLSP ejemLSP = new ProgramaLSP();
+                        ejemLSP.Ejecutar();
+                        break;
 
 				}
 

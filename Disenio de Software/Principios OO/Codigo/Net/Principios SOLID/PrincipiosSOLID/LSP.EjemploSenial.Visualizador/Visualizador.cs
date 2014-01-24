@@ -1,5 +1,5 @@
 using System;
-using LSP.EjemploSenial.Modelo;
+using LSP.EjemploSenial.ISenial;
 
 namespace LSP.EjemploSenial.Visualizador
 {

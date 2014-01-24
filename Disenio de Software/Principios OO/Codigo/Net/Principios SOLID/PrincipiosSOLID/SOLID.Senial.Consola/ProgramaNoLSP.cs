@@ -1,5 +1,5 @@
 using System;
-using LSP.EjemploSenial.Modelo;
+using LSP.EjemploSenial.ISenial;
 using LSP.EjemploSenial.Adquisidor;
 using LSP.EjemploSenial.Procesador;
 using LSP.EjemploSenial.Visualizador;
@@ -21,7 +21,7 @@ namespace SOLID.Tratamiento.Consola
             SenialPila senialAdquirida = new SenialPila (5);
             /*Caso 3*/
             /*SenialCola senialAdquirida = new SenialCola(5);*/
-			Senial senialProcesada = new Senial ();
+			SenialBasica senialProcesada = new SenialBasica ();
 			AdquisidorArchivo adquisidor = new AdquisidorArchivo (senialAdquirida);
 			ProcesadorDiferencial procesador = new ProcesadorDiferencial ();
 			Visualizador visualizador = new Visualizador ();
