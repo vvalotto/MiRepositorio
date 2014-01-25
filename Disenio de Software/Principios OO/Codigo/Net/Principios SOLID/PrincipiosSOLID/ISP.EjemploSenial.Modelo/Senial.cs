@@ -3,8 +3,6 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 using ISP.EjemploSenial.Modelo;
-using ISP.EjemploSenial.Utils.Auditable;
-using ISP.EjemploSenial.Utils.ITtrazable;
 
 namespace ISP.EjemploSenial.Modelo
 {

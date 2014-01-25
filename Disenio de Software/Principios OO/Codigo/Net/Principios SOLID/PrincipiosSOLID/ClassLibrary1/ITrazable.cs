@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISP.EjemploSenial.Utils.ITtrazable
+namespace ISP.EjemploSenial.Utils
 {
 
     public enum Nivel { INFO, WARN, ERROR };
     
-    public class ITrazable
+    public interface ITrazable
     {
 
-        void Inicializar();
+        void IniTraza(string alogger, Nivel nivel);
 
         void Trazar(string mensaje, Nivel nivel);
 

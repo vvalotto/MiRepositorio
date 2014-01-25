@@ -35,6 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramaISP.cs" />
     <Compile Include="ProgramaLSP.cs" />
     <Compile Include="ProgramaNoISP.cs" />
     <Compile Include="ProgramaOCP.cs" />
@@ -46,6 +47,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ISP.EjemploSenial.Utils.csproj">
+      <Project>{83c3c124-2c93-4fa8-9045-3f03cd7edc89}</Project>
+      <Name>ISP.EjemploSenial.Utils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SPR.EjemploSenial.Modelo\SPR.EjemploSenial.Modelo.csproj">
       <Project>{6C17BDD6-64C5-4D55-8AE7-44D9A1F796E6}</Project>
       <Name>SPR.EjemploSenial.Modelo</Name>

@@ -32,11 +32,18 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SenialPila.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ISenial.cs" />
     <Compile Include="Senial.cs" />
     <Compile Include="SenialCola.cs" />
-    <Compile Include="SenialPila.cs" />
+    <Compile Include="SenialPilaAT.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ISP.EjemploSenial.Utils.csproj">
+      <Project>{83c3c124-2c93-4fa8-9045-3f03cd7edc89}</Project>
+      <Name>ISP.EjemploSenial.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

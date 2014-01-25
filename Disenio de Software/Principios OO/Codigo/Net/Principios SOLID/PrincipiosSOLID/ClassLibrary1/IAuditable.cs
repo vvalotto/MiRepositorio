@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISP.EjemploSenial.Utils.Auditable
+namespace ISP.EjemploSenial.Utils
 {
-    public class IAuditable
+    public interface IAuditable
     {
-        void Inicializar(string usuario, string programa, string accion);
+        void IniAuditoria(string auditor);
 
-        void Auditar();
+        void Auditar(object usuario, object programa, object accion);
 
 
     }

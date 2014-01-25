@@ -2,13 +2,18 @@
 using System.Collections;
 using System.Linq;
 using System.Text;
+using ISP.EjemploSenial.Utils;
+using System.IO;
+
 
 namespace ISP.EjemploSenial.Modelo
 {
-    public class SenialPila : Senial, 
+    public class SenialPila: Senial
     {
         int _tamanio;
         int _tope;
+
+        string _nombreAuditor;
 
         public int tamanio
         {
