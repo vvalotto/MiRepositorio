@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ISP.EjemploSenial.Modelo
 {
-    public class SenialPila : Senial
+    public class SenialPila : Senial, 
     {
         int _tamanio;
         int _tope;
