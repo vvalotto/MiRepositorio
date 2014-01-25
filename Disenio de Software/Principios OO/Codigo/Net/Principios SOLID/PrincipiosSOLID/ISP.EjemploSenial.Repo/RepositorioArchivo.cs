@@ -28,25 +28,37 @@ namespace ISP.EjemploSenial.Repo
         
         public void Guardar(Senial senial)
         {
+            
             string _linea_dato = "";
 			string _fecha = senial.fecha_adquisicion.ToString ("yyyy MMMMM dd");
             string _cantidad = senial.CantidadValores().ToString();
 			string _id = senial.Id.ToString ();
 			string _nombre = _ubicacion + "/" + _id + " - " + _fecha + ".txt";
-            StreamWriter _archivo = new StreamWriter(_nombre);
 
-			string cabecera = _id + ";" + _fecha + ";" + _cantidad + ";";
-            _archivo.WriteLine(cabecera);
-
-			for (int i = 1; i < senial.CantidadValores(); i++)
+            try
             {
-				_linea_dato = i.ToString() + ";" + senial.ObtenerValor(i - 1).ToString()+";";
-                _archivo.WriteLine(_linea_dato);
+                using (StreamWriter _archivo = new StreamWriter(_nombre)) 
+                {
+                    string cabecera = _id + ";" + _fecha + ";" + _cantidad + ";";
+                    _archivo.WriteLine(cabecera);
+
+                    for (int i = 1; i <= senial.CantidadValores(); i++)
+                    {
+                        _linea_dato = i.ToString() + ";" + senial.ObtenerValor(i - 1).ToString() + ";";
+                        _archivo.WriteLine(_linea_dato);
+                    }
+
+                    _archivo.Close();
+
+                    this.Trazar(senial, "Se guardo la señal");
+                    this.Auditar(senial, senial.GetType().ToString());
+                }
             }
-
-            _archivo.Close();
-
-			this.Trazar (senial, "Se guardo la señal");
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                this.Trazar(senial, e.Message);
+            }
 
         }
 
@@ -88,6 +100,7 @@ namespace ISP.EjemploSenial.Repo
 					
 				}
 				this.Trazar (_senialArchivada, "Se recupero la señal");
+                this.Auditar(_senialArchivada, _senialArchivada.GetType().ToString());
 			}
 			catch (Exception e) {
 				Console.WriteLine(e.Message);
@@ -122,7 +135,8 @@ namespace ISP.EjemploSenial.Repo
 		public void Auditar(Senial senial, string programa)
         {
 			string _nombreAuditor = "Auditor.log";
-			using (StreamWriter auditor = File.AppendText (_nombreAuditor)) {
+            using (StreamWriter auditor = File.AppendText(_ubicacion + "/" + _nombreAuditor))
+            {
 				auditor.WriteLine (">--------");
 				auditor.WriteLine (senial.descripcion);
 				auditor.WriteLine (senial.fecha_adquisicion.ToString ());
@@ -133,9 +147,9 @@ namespace ISP.EjemploSenial.Repo
 		public void Trazar(Senial senial, string mensaje)
         {
 			string _nombreLogger = "TrazaProcesos.log";
-			using (StreamWriter _Logger = File.AppendText (_nombreLogger)) {
+            using (StreamWriter _Logger = File.AppendText(_ubicacion + "/" + _nombreLogger))
+            {
 				_Logger.WriteLine (">-------- {0}", DateTime.Now.ToString ());
-
 				_Logger.WriteLine (senial.descripcion);
 				_Logger.WriteLine (senial.fecha_adquisicion.ToString ());
 				_Logger.WriteLine (mensaje);

@@ -16,14 +16,11 @@ namespace ISP.EjemploSenial.Procesador
         public void Procesar(Senial senialAdquirida, Senial senialProcesada)
         {
             decimal _valor_anterior = 0;
-            Console.WriteLine();
-            Console.WriteLine("Procesando...");
             for (int i = 1; i <= senialAdquirida.CantidadValores(); i++)
             {
                 senialProcesada.PonerValor((decimal)senialAdquirida.ObtenerValor(i - 1) - _valor_anterior);
                 _valor_anterior = (decimal)senialAdquirida.ObtenerValor(i - 1);
             }
-            Console.WriteLine("Fin proceso!");
         }
     }
 }

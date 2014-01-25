@@ -16,8 +16,7 @@ namespace ISP.EjemploSenial.Procesador
 
         public void Procesar(Senial senialAdquirida, Senial senialProcesada)
         {
-            Console.WriteLine();
-            Console.WriteLine("Procesando...");
+
             for (int i = 1; i <= senialAdquirida.CantidadValores(); i++)
             {
                 if ((decimal)senialAdquirida.ObtenerValor(i - 1) < 5)
@@ -29,7 +28,7 @@ namespace ISP.EjemploSenial.Procesador
                     senialProcesada.PonerValor(0);
                 }
             }
-            Console.WriteLine("Fin proceso!");
+
         }
     }
 }

@@ -34,29 +34,41 @@ namespace ISP.EjemploSenial.Repo
 			string _id = senial.Id.ToString ();
 			string _fecha = senial.fecha_adquisicion.ToString ("yyyy MMMMM dd");
 			string _nombre = _ubicacion + "/"+ _id + " - " + _fecha + ".xml";
-			XmlWriter _xml =  XmlWriter.Create(_nombre);
 
-			_xml.WriteStartDocument ();
-			_xml.WriteStartElement ("cabecera");
+            try
+            {
 
-			_xml.WriteStartElement ("descripcion");
-			_xml.WriteString(senial.descripcion);
-			_xml.WriteEndElement ();
+                XmlWriter _xml = XmlWriter.Create(_nombre);
 
-			_xml.WriteStartElement ("fecha");
-			_xml.WriteString(_fecha);
-			_xml.WriteEndElement();
+                _xml.WriteStartDocument();
+                _xml.WriteStartElement("cabecera");
 
-			_xml.WriteStartElement ("valores");
-			for (int i = 1; i < senial.CantidadValores(); i++)
-			{
-				_xml.WriteElementString ("dato", senial.ObtenerValor (i - 1).ToString());
+                _xml.WriteStartElement("descripcion");
+                _xml.WriteString(senial.descripcion);
+                _xml.WriteEndElement();
 
-			}
-			_xml.WriteEndElement();
+                _xml.WriteStartElement("fecha");
+                _xml.WriteString(_fecha);
+                _xml.WriteEndElement();
 
-			_xml.WriteEndDocument();
-			_xml.Close ();
+                _xml.WriteStartElement("valores");
+                for (int i = 1; i < senial.CantidadValores(); i++)
+                {
+                    _xml.WriteElementString("dato", senial.ObtenerValor(i - 1).ToString());
+
+                }
+                _xml.WriteEndElement();
+
+                _xml.WriteEndDocument();
+                _xml.Close();
+                this.Trazar(senial, "Se guardo la señal");
+                this.Auditar(senial, senial.GetType().ToString());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                this.Trazar(senial, e.Message);
+            }
 
 		}
 		public Senial Recuperar (int id)
@@ -67,7 +79,7 @@ namespace ISP.EjemploSenial.Repo
 		public void Auditar (Senial senial, string programa)
 		{
 			string _nombreAuditor = "Auditor.log";
-			using (StreamWriter auditor = File.AppendText (_nombreAuditor)) {
+			using (StreamWriter auditor = File.AppendText (_ubicacion + "/" + _nombreAuditor)) {
 				auditor.WriteLine (">--------");
 				auditor.WriteLine (senial.descripcion);
 				auditor.WriteLine (senial.fecha_adquisicion.ToString ());
@@ -77,7 +89,14 @@ namespace ISP.EjemploSenial.Repo
 		}
 		public void Trazar (Senial senial, string mensaje)
 		{
-			throw new NotImplementedException ();
+            string _nombreLogger = "TrazaProcesos.log";
+            using (StreamWriter _Logger = File.AppendText(_ubicacion + "/" + _nombreLogger))
+            {
+                _Logger.WriteLine(">-------- {0}", DateTime.Now.ToString());
+                _Logger.WriteLine(senial.descripcion);
+                _Logger.WriteLine(senial.fecha_adquisicion.ToString());
+                _Logger.WriteLine(mensaje);
+            }
 		}
 		#endregion
     }
