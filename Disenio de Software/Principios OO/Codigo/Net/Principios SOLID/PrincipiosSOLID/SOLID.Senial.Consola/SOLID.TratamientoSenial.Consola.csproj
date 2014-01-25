@@ -46,10 +46,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\NoSPR.EjemploSenial\NoSPR.EjemploSenial.csproj">
-      <Project>{B6CD2570-5664-4D63-B9FD-F0D4C4EA1708}</Project>
-      <Name>NoSPR.EjemploSenial</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SPR.EjemploSenial.Modelo\SPR.EjemploSenial.Modelo.csproj">
       <Project>{6C17BDD6-64C5-4D55-8AE7-44D9A1F796E6}</Project>
       <Name>SPR.EjemploSenial.Modelo</Name>
@@ -117,6 +113,10 @@
     <ProjectReference Include="..\ISP.EjemploSenial.Visualizador\ISP.EjemploSenial.Visualizador.csproj">
       <Project>{935961FB-2DE8-47E4-9221-6460812EA2DF}</Project>
       <Name>ISP.EjemploSenial.Visualizador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NoSPR.EjemploSenial\NoSPR.EjemploSenial.csproj">
+      <Project>{B6CD2570-5664-4D63-B9FD-F0D4C4EA1708}</Project>
+      <Name>NoSPR.EjemploSenial</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

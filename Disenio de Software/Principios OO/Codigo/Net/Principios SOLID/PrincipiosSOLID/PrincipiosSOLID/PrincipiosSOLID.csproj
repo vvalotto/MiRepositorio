@@ -38,18 +38,4 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\LibOCPModelo\LibOCPModelo.csproj">
-      <Project>{F30002C5-CD25-487B-A3DB-A88FA247074C}</Project>
-      <Name>LibOCPModelo</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LibOCPControlador\LibOCPControlador.csproj">
-      <Project>{A97A5254-015E-4F57-9B4C-5354C08992D4}</Project>
-      <Name>LibOCPControlador</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LibOCPReglas\LibOCPReglas.csproj">
-      <Project>{DA79AF18-F0E5-422E-B39F-22766590640F}</Project>
-      <Name>LibOCPReglas</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

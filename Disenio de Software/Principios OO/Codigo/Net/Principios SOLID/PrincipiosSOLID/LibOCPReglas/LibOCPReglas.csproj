@@ -37,10 +37,4 @@
     <Compile Include="IVA.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\LibOCPModelo\LibOCPModelo.csproj">
-      <Project>{F30002C5-CD25-487B-A3DB-A88FA247074C}</Project>
-      <Name>LibOCPModelo</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

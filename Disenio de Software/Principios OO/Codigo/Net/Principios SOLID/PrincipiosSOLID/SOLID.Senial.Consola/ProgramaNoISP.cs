@@ -61,14 +61,15 @@ namespace SOLID.Tratamiento.Consola
             visualizador.MostrarValores(senialAdquirida);
             Console.WriteLine(senialAdquirida.CantidadValores().ToString());
 
-			Console.WriteLine ("Se guarda la señal");
-			repXML.Guardar (senialAdquirida);
-			repXML.Auditar (senialAdquirida, this.GetType ().ToString ());
-			repArchivo.Guardar (senialProcesada);
-			repArchivo.Auditar (senialProcesada, this.GetType ().ToString ());
 
+			Console.WriteLine ("Guarda la Señal");
+			repArchivo.Guardar (senialAdquirida);
+			Console.WriteLine ("--->");
+			Senial senialLeida = repArchivo.Recuperar (101);
 
-
+			Console.WriteLine("Señal Recuperada :");
+			visualizador.MostrarValores(senialLeida);
+			Console.WriteLine (senialLeida.CantidadValores ().ToString ());
         }
     }
 }

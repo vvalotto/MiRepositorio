@@ -28,6 +28,9 @@ namespace ISP.EjemploSenial.Modelo
             {
                 return _fecha_adquisicion;
             }
+			set{
+				_fecha_adquisicion = value;
+			}
         }
 
 		public string descripcion {
