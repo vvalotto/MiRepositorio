@@ -35,6 +35,7 @@ namespace SOLID.Tratamiento.Consola
                 Console.WriteLine ("> 6 . Ejemplo LSP");
 				Console.WriteLine ("> 7 . Ejemplo No LSP");
                 Console.WriteLine ("> 8 . Ejemplo No LSP");
+				Console.WriteLine ("> 9 . Ejemplo DIP");
 
 				Console.Write ("Seleccione una opcion:");
 				_opcion = Console.ReadLine ();
@@ -82,6 +83,12 @@ namespace SOLID.Tratamiento.Consola
                         ProgramaISP ejemISP = new ProgramaISP();
                         ejemISP.Ejecutar();
                         break;
+				case "9":
+						Console.Clear();
+						Console.WriteLine("Ejmeplo DIP");
+					ProgramaDIP ejemDIP = new ProgramaDIP();
+						ejemDIP.Ejecutar();
+						break;
 
 				}
 

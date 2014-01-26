@@ -44,6 +44,7 @@
     <Compile Include="ProgramaSRP.cs" />
     <Compile Include="ProgramaNoOCP.cs" />
     <Compile Include="ProgramaNoLSP.cs" />
+    <Compile Include="ProgramaDIP.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -122,6 +123,22 @@
     <ProjectReference Include="..\ISP.EjemploSenial.Utils\ISP.EjemploSenial.Utils.csproj">
       <Project>{83C3C124-2C93-4FA8-9045-3F03CD7EDC89}</Project>
       <Name>ISP.EjemploSenial.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DIP.EjemploSenial.Adquisidor\DIP.EjemploSenial.Adquisidor.csproj">
+      <Project>{A255AFCC-8660-4D1F-8F56-0C0666930FFE}</Project>
+      <Name>DIP.EjemploSenial.Adquisidor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DIP.EjemploSenial.Modelo\DIP.EjemploSenial.Modelo.csproj">
+      <Project>{000738B7-275B-4689-99AD-F649E7799794}</Project>
+      <Name>DIP.EjemploSenial.Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DIP.EjemploSenial.Visualizador\DIP.EjemploSenial.Visualizador.csproj">
+      <Project>{3B81E617-5341-4D04-B1E6-4B0EB460ACAE}</Project>
+      <Name>DIP.EjemploSenial.Visualizador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DIP.EjemploSenial.Utils\DIP.EjemploSenial.Utils.csproj">
+      <Project>{50822588-5A50-427A-8390-788333F5F217}</Project>
+      <Name>DIP.EjemploSenial.Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
