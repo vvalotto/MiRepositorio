@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ISP.EjemploSenial.Modelo\ISP.EjemploSenial.Modelo.csproj">
-      <Project>{5f0531f8-5c73-40c4-aff0-e9256f05e382}</Project>
+      <Project>{5F0531F8-5C73-40C4-AFF0-E9256F05E382}</Project>
       <Name>ISP.EjemploSenial.Modelo</Name>
     </ProjectReference>
   </ItemGroup>

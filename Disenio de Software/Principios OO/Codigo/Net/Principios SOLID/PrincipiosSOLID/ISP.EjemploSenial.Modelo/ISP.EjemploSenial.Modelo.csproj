@@ -39,11 +39,11 @@
     <Compile Include="SenialCola.cs" />
     <Compile Include="SenialPilaAT.cs" />
   </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\ISP.EjemploSenial.Utils\ISP.EjemploSenial.Utils.csproj">
-      <Project>{83c3c124-2c93-4fa8-9045-3f03cd7edc89}</Project>
+      <Project>{83C3C124-2C93-4FA8-9045-3F03CD7EDC89}</Project>
       <Name>ISP.EjemploSenial.Utils</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

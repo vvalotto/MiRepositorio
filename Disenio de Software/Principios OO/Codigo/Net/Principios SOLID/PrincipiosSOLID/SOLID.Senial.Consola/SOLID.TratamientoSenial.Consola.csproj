@@ -47,10 +47,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\ISP.EjemploSenial.DAO\ISP.EjemploSenial.DAO.csproj">
-      <Project>{704bacad-b926-4669-8d8a-392d13b38c6a}</Project>
-      <Name>ISP.EjemploSenial.DAO</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SPR.EjemploSenial.Modelo\SPR.EjemploSenial.Modelo.csproj">
       <Project>{6C17BDD6-64C5-4D55-8AE7-44D9A1F796E6}</Project>
       <Name>SPR.EjemploSenial.Modelo</Name>
@@ -118,6 +114,14 @@
     <ProjectReference Include="..\NoSPR.EjemploSenial\NoSPR.EjemploSenial.csproj">
       <Project>{B6CD2570-5664-4D63-B9FD-F0D4C4EA1708}</Project>
       <Name>NoSPR.EjemploSenial</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ISP.EjemploSenial.DAO\ISP.EjemploSenial.DAO.csproj">
+      <Project>{704BACAD-B926-4669-8D8A-392D13B38C6A}</Project>
+      <Name>ISP.EjemploSenial.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ISP.EjemploSenial.Utils\ISP.EjemploSenial.Utils.csproj">
+      <Project>{83C3C124-2C93-4FA8-9045-3F03CD7EDC89}</Project>
+      <Name>ISP.EjemploSenial.Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
