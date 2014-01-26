@@ -34,6 +34,7 @@ namespace DIP.EjemploSenial.Modelo
         {
             _tamanio = tamanio;
             _tope = 0;
+            base.descripcion = "Sin Descripcion";
         }
 
         public override void PonerValor(decimal valor)
