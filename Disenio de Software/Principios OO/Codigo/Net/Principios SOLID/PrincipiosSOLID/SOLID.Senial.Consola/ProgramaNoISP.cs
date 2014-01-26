@@ -5,7 +5,7 @@ using System.Text;
 using ISP.EjemploSenial.Adquisidor;
 using ISP.EjemploSenial.Modelo;
 using ISP.EjemploSenial.Procesador;
-using ISP.EjemploSenial.Repo;
+using ISP.EjemploSenial.DAO;
 using ISP.EjemploSenial.Visualizador;
 
 namespace SOLID.Tratamiento.Consola
