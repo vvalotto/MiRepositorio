@@ -34,7 +34,7 @@ namespace DIP.EjemploSenial.Adquisidor
 
         public override void LeerSenial()
         {
-            int _nroMuestra = 10;
+			int _nroMuestra = 5;
 
             Console.WriteLine("Lectura de la Señal");
             for (int i = 1; i <= _nroMuestra; i++)

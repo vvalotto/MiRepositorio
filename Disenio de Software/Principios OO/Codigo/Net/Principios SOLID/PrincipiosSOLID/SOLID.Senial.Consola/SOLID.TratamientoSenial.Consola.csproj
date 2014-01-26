@@ -140,6 +140,18 @@
       <Project>{50822588-5A50-427A-8390-788333F5F217}</Project>
       <Name>DIP.EjemploSenial.Utils</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DIP.EjemploSenial.DAO\DIP.EjemploSenial.DAO.csproj">
+      <Project>{CB5FA623-66D3-4F86-B86F-EB40E9F714F8}</Project>
+      <Name>DIP.EjemploSenial.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DIP.EjemploSenial.Procesador\DIP.EjemploSenial.Procesador.csproj">
+      <Project>{BEE7C40C-7F4B-4268-857E-21AE6FCBBB13}</Project>
+      <Name>DIP.EjemploSenial.Procesador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DIP.EjemploSenial.Identificador\DIP.EjemploSenial.Identificador.csproj">
+      <Project>{22F15911-F800-4B70-985B-D72139DFBB08}</Project>
+      <Name>DIP.EjemploSenial.Identificador</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

@@ -18,7 +18,7 @@ namespace DIP.EjemploSenial.Modelo
             _tamanio = tamanio;
             _largo = 0;
             _pinicial = 0;
-            _pfinal = 1;
+			_pfinal = 0;
         }
 
         public override void PonerValor(decimal valor)
@@ -79,7 +79,7 @@ namespace DIP.EjemploSenial.Modelo
 
         public override int CantidadValores()
         {
-            if (_pfinal > _pinicial)
+			/*if (_pfinal > _pinicial)
             {
                 return _pfinal - _pinicial;
             }
@@ -87,6 +87,8 @@ namespace DIP.EjemploSenial.Modelo
             {
                 return _pfinal - _pinicial + _tamanio;
             }
+            */
+			return _largo;
         }
 
     }
