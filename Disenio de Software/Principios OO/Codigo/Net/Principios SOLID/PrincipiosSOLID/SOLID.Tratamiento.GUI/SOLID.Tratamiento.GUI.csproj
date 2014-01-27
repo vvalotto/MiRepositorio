@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,17 +83,21 @@
       <Project>{a255afcc-8660-4d1f-8f56-0c0666930ffe}</Project>
       <Name>DIP.EjemploSenial.Adquisidor</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DIP.EjemploSenial.DAO\DIP.EjemploSenial.DAO.csproj">
+      <Project>{cb5fa623-66d3-4f86-b86f-eb40e9f714f8}</Project>
+      <Name>DIP.EjemploSenial.DAO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DIP.EjemploSenial.Modelo\DIP.EjemploSenial.Modelo.csproj">
       <Project>{000738b7-275b-4689-99ad-f649e7799794}</Project>
       <Name>DIP.EjemploSenial.Modelo</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DIP.EjemploSenial.Procesador\DIP.EjemploSenial.Procesador.csproj">
+      <Project>{bee7c40c-7f4b-4268-857e-21ae6fcbbb13}</Project>
+      <Name>DIP.EjemploSenial.Procesador</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DIP.EjemploSenial.Utils\DIP.EjemploSenial.Utils.csproj">
       <Project>{50822588-5a50-427a-8390-788333f5f217}</Project>
       <Name>DIP.EjemploSenial.Utils</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DIP.EjemploSenial.Visualizador\DIP.EjemploSenial.Visualizador.csproj">
-      <Project>{3b81e617-5341-4d04-b1e6-4b0eb460acae}</Project>
-      <Name>DIP.EjemploSenial.Visualizador</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

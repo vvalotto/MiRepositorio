@@ -46,6 +46,7 @@ namespace DIP.EjemploSenial.Modelo
         public Senial()
         {
             _fecha_adquisicion = DateTime.Now;
+            _descripcion = "Sin Descripcion";
         }
 
         public decimal ObtenerValor(int indice)
@@ -100,6 +101,11 @@ namespace DIP.EjemploSenial.Modelo
         public virtual decimal SacarValor()
         {
             throw new NotImplementedException();
+        }
+
+        public Senial Obtener()
+        {
+            return this;
         }
     }
 
