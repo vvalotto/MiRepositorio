@@ -48,8 +48,6 @@ namespace DIP.EjemploSenial.DAO
                         _archivo.WriteLine(_linea_dato);
                     }
 
-                    _archivo.Close();
-
                     this.Trazar(senial, "Se guardo la señal");
                     this.Auditar(senial, senial.GetType().ToString());
                 }
