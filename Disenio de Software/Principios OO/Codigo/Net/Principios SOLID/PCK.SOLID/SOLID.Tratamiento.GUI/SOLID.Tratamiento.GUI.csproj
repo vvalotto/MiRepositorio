@@ -11,7 +11,8 @@
     <AssemblyName>SOLID.Tratamiento.GUI</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,11 +36,6 @@
   <ItemGroup>
     <Reference Include="Adquisidor">
       <HintPath>..\..\..\..\..\..\..\..\..\..\..\..\Temp\AppSOLID\Adquisidor.dll</HintPath>
-    </Reference>
-    <Reference Include="DAO, Version=10.0.4504.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>..\..\..\..\..\..\..\..\..\..\..\..\Temp\AppSOLID\DAO.dll</HintPath>
     </Reference>
     <Reference Include="Modelo">
       <HintPath>..\..\..\..\..\..\..\..\..\..\..\..\Temp\AppSOLID\Modelo.dll</HintPath>
@@ -96,6 +92,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PrincipiosSOLID\DIP.EjemploSenial.DAO\DIP.EjemploSenial.DAO.csproj">
+      <Project>{cb5fa623-66d3-4f86-b86f-eb40e9f714f8}</Project>
+      <Name>DIP.EjemploSenial.DAO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

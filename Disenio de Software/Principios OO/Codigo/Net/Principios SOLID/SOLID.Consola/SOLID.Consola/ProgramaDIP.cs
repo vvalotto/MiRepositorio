@@ -4,6 +4,7 @@ using DIP.EjemploSenial.Adquisidor;
 using DIP.EjemploSenial.Visualizador;
 using DIP.EjemploSenial.Procesador;
 using DIP.EjemploSenial.Identificador;
+using DIP.EjemploSenial.DAO;
 
 namespace SOLID.Consola
 {
@@ -21,6 +22,8 @@ namespace SOLID.Consola
 			var senialProcesada = new SenialCola (5);
 			var procesador = new ProcesadorDiferencial ();
 			var identificador = new Identificador ();
+            var repArchivo = new RepositorioArchivo("c:\\Temp");
+
 
 
 			/* Prepara la cadena de procesos */
@@ -29,6 +32,7 @@ namespace SOLID.Consola
 			gAdquisidor.adquisidor = adquisidor;
 			var gProcesador = new GestorProcesador (procesador);
 			var visualizador = new Visualizador ();
+            var gRepositorio = new GestorRepositorio(repArchivo);
 
 			/*Identifica las señales*/
 			identificador.Ingresar (senialAdquirida, "Señal a Adquirir");
@@ -42,6 +46,18 @@ namespace SOLID.Consola
 			Console.WriteLine ("2. Procesa");
 			gProcesador.Procesar (senialAdquirida, senialProcesada);
 			visualizador.MostrarValores (senialProcesada);
+
+            /*Guarda las señales*/
+            Console.WriteLine("3. Guarda");
+            gRepositorio.Guardar(senialAdquirida);
+            gRepositorio.Guardar(senialProcesada);
+
+            var idsa = senialAdquirida.Id;
+            var idsp = senialProcesada.Id;
+
+            Console.WriteLine("4. Muestra los guardado");
+            visualizador.MostrarValores(gRepositorio.Recuperar(idsa));
+            visualizador.MostrarValores(gRepositorio.Recuperar(idsp));
 
 		}
 	}

@@ -62,5 +62,6 @@ namespace DIP.EjemploSenial.Adquisidor
                 Console.WriteLine(e.Message);
             }
         }
+
     }
 }
