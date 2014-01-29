@@ -1,16 +1,9 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="DIP.EjemploSenial.Visualizador/Visualizador.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DIP.EjemploSenial.Modelo/Senial.cs">
     <Files>
-      <File FileName="DIP.EjemploSenial.Adquisidor/GestorAdquisidor.cs" Line="24" Column="32" />
-      <File FileName="DIP.EjemploSenial.Adquisidor/Adquisidor.cs" Line="11" Column="10" />
-      <File FileName="DIP.EjemploSenial.Adquisidor/AdquisidorSimple.cs" Line="4" Column="14" />
-      <File FileName="DIP.EjemploSenial.Adquisidor/AdquisidorArchivo.cs" Line="26" Column="15" />
-      <File FileName="SOLID.Senial.Consola/ProgramaDIP.cs" Line="19" Column="25" />
-      <File FileName="SOLID.Senial.Consola/ProgramaLSP.cs" Line="8" Column="1" />
-      <File FileName="DIP.EjemploSenial.Modelo/SenialPila.cs" Line="32" Column="26" />
-      <File FileName="SOLID.Senial.Consola/Program.cs" Line="89" Column="43" />
-      <File FileName="DIP.EjemploSenial.Visualizador/Visualizador.cs" Line="22" Column="1" />
+      <File FileName="DIP.EjemploSenial.Adquisidor/Properties/FactoryAdquisidor.cs" Line="22" Column="4" />
+      <File FileName="DIP.EjemploSenial.Modelo/Senial.cs" Line="5" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

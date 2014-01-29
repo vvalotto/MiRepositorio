@@ -4,6 +4,7 @@ using DIP.EjemploSenial.Adquisidor;
 using DIP.EjemploSenial.Visualizador;
 using DIP.EjemploSenial.Procesador;
 using DIP.EjemploSenial.Identificador;
+using DIP.EjemploSenial.Utils;
 
 namespace SOLID.Tratamiento.Consola
 {
@@ -15,6 +16,8 @@ namespace SOLID.Tratamiento.Consola
 
 		public void Ejecutar() {
 
+
+			Adquisidor adquisidor;
 			/*Prepara la adquisicion*/
 			/* Tipo de señales y procesador */
 			var senialAdquirida = new SenialPila (5);
@@ -24,8 +27,10 @@ namespace SOLID.Tratamiento.Consola
 
 
 			/* Prepara la cadena de procesos */
+
 			var gAdquisidor = new GestorAdquisidor ();
-			var adquisidor = new AdquisidorSimple (senialAdquirida);
+			/*var adquisidor = new AdquisidorSimple (senialAdquirida);*/
+			adquisidor = FactoryAdquisidor.ObtenerAdquisidor ("Simple", senialAdquirida);
 			gAdquisidor.adquisidor = adquisidor;
 			var gProcesador = new GestorProcesador (procesador);
 			var visualizador = new Visualizador ();

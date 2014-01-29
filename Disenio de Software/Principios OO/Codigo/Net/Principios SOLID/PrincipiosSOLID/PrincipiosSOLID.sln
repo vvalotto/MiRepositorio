@@ -45,8 +45,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIP.EjemploSenial.Adquisido
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIP.EjemploSenial.Modelo", "DIP.EjemploSenial.Modelo\DIP.EjemploSenial.Modelo.csproj", "{000738B7-275B-4689-99AD-F649E7799794}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIP.EjemploSenial.Utils", "DIP.EjemploSenial.Utils\DIP.EjemploSenial.Utils.csproj", "{50822588-5A50-427A-8390-788333F5F217}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIP.EjemploSenial.Visualizador", "DIP.EjemploSenial.Visualizador\DIP.EjemploSenial.Visualizador.csproj", "{3B81E617-5341-4D04-B1E6-4B0EB460ACAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIP.EjemploSenial.Procesador", "DIP.EjemploSenial.Procesador\DIP.EjemploSenial.Procesador.csproj", "{BEE7C40C-7F4B-4268-857E-21AE6FCBBB13}"
@@ -54,6 +52,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIP.EjemploSenial.DAO", "DIP.EjemploSenial.DAO\DIP.EjemploSenial.DAO.csproj", "{CB5FA623-66D3-4F86-B86F-EB40E9F714F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIP.EjemploSenial.Identificador", "DIP.EjemploSenial.Identificador\DIP.EjemploSenial.Identificador.csproj", "{22F15911-F800-4B70-985B-D72139DFBB08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIP.EjemploSenial.Utils", "DIP.EjemploSenial.Utils\DIP.EjemploSenial.Utils.csproj", "{50822588-5A50-427A-8390-788333F5F217}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
