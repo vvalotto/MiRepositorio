@@ -1,11 +1,6 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="DIP.EjemploSenial.Modelo/Senial.cs">
-    <Files>
-      <File FileName="DIP.EjemploSenial.Adquisidor/Properties/FactoryAdquisidor.cs" Line="22" Column="4" />
-      <File FileName="DIP.EjemploSenial.Modelo/Senial.cs" Line="5" Column="25" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/vvalotto/Documents/MiRepositorio/Disenio de Software/Principios OO/Codigo/Net/Principios SOLID/PrincipiosSOLID/LibOCPModelo/Factura.cs" line="92" column="1" />

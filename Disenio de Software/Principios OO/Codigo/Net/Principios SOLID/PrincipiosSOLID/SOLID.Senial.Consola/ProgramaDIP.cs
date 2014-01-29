@@ -16,23 +16,20 @@ namespace SOLID.Tratamiento.Consola
 
 		public void Ejecutar() {
 
-
-			Adquisidor adquisidor;
+	
 			/*Prepara la adquisicion*/
 			/* Tipo de señales y procesador */
-			var senialAdquirida = new SenialPila (5);
-			var senialProcesada = new SenialCola (5);
-			var procesador = new ProcesadorDiferencial ();
-			var identificador = new Identificador ();
+			Adquisidor adquisidor;
+			IProcesador procesador;
+			Senial senialAdquirida;
+			Senial senialProcesada;
 
-
-			/* Prepara la cadena de procesos */
-
-			var gAdquisidor = new GestorAdquisidor ();
-			/*var adquisidor = new AdquisidorSimple (senialAdquirida);*/
 			adquisidor = FactoryAdquisidor.ObtenerAdquisidor ("Simple", senialAdquirida);
-			gAdquisidor.adquisidor = adquisidor;
-			var gProcesador = new GestorProcesador (procesador);
+			procesador = FactoryProcesador.ObtenerProcesador ("Umbral");
+			senialAdquirida = FactorySenial.ObtenerSenial("Pila", 5);
+			senialProcesada = FactorySenial.ObtenerSenial("Basica", 0);
+
+			var identificador = new Identificador ();
 			var visualizador = new Visualizador ();
 
 			/*Identifica las señales*/
@@ -41,11 +38,11 @@ namespace SOLID.Tratamiento.Consola
 
 			/*Ejecuta la cadena de procesos */
 			Console.WriteLine ("1. Adquiere");
-			gAdquisidor.Adquirir ();
-			visualizador.MostrarValores (gAdquisidor.Obtener ());
+			adquisidor.LeerSenial ();
+			visualizador.MostrarValores (adquisidor.ObtenerSenialAdquirida());
 
 			Console.WriteLine ("2. Procesa");
-			gProcesador.Procesar (senialAdquirida, senialProcesada);
+			procesador.Procesar (senialAdquirida, senialProcesada);
 			visualizador.MostrarValores (senialProcesada);
 
 		}

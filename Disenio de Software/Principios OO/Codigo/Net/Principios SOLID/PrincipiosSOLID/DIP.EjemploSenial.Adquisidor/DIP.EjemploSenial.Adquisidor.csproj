@@ -38,7 +38,6 @@
     <Compile Include="Adquisidor.cs" />
     <Compile Include="AdquisidorArchivo.cs" />
     <Compile Include="AdquisidorSimple.cs" />
-    <Compile Include="GestorAdquisidor.cs" />
     <Compile Include="FactoryAdquisidor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

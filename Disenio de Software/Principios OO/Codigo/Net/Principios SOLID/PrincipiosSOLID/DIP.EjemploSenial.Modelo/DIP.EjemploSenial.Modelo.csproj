@@ -37,6 +37,7 @@
     <Compile Include="Senial.cs" />
     <Compile Include="SenialCola.cs" />
     <Compile Include="SenialPila.cs" />
+    <Compile Include="FactorySenial.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -37,7 +37,7 @@
     <Compile Include="ProcesadorConUmbral.cs" />
     <Compile Include="ProcesadorDiferencial.cs" />
     <Compile Include="ProcesadorSimple.cs" />
-    <Compile Include="GestorProcesador.cs" />
+    <Compile Include="FactoryProcesador.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
