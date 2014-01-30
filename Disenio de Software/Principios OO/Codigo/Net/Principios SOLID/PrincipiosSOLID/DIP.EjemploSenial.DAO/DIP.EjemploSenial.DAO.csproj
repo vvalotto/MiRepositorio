@@ -14,7 +14,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\..\..\..\..\..\..\..\..\Temp\AppSOLID\</OutputPath>
+    <OutputPath>Temp\AppSOLID\</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,16 +24,12 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\..\..\..\..\..\..\..\..\..\Temp\AppSOLID\</OutputPath>
+    <OutputPath>Temp\AppSOLID\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Modelo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\..\..\..\..\Temp\AppSOLID\Modelo.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
@@ -46,4 +42,10 @@
     <Compile Include="RepositorioXML.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\DIP.EjemploSenial.Modelo\DIP.EjemploSenial.Modelo.csproj">
+      <Project>{000738B7-275B-4689-99AD-F649E7799794}</Project>
+      <Name>DIP.EjemploSenial.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
