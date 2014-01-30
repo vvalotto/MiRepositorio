@@ -16,100 +16,97 @@ namespace SOLID.Tratamiento.GUI
 {
     public partial class Form1 : Form
     {
-        Senial senial;
+        
         Adquisidor adquisidor;
-        GestorAdquisidor gAdquisidor;
-        GestorProcesador gProcesador = null;
+        IProcesador procesador;
+        Senial senialAdquirida;
         Senial senialProcesada;
 
         public Form1()
         {
             InitializeComponent();
-            gAdquisidor = new GestorAdquisidor();
+            senialAdquirida = FactorySenial.ObtenerSenial("Pila", 10);
+            senialProcesada = FactorySenial.ObtenerSenial("Cola", 10);
+            
         }
 
 
         private void btnAdquirir_Click(object sender, EventArgs e)
         {
-            
-            senial = new SenialBasica();
-            gAdquisidor.Adquirir();
-            
-            senial = (gAdquisidor.Obtener());
-            listBox1.Items.Add(senial.descripcion);
+            adquisidor.LeerSenial();
 
-            for (int i = 0; i < senial.CantidadValores(); i++)
+            for (int i = 0; i < senialAdquirida.CantidadValores(); i++)
             {
-                listBox1.Items.Add(senial.ObtenerValor(i));
+                listBox1.Items.Add(senialAdquirida.ObtenerValor(i));
             }
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            senial = new SenialBasica();
-            senial = (gAdquisidor.Obtener());
-            listBox1.Items.Add(senial.descripcion);
+ 
+            listBox1.Items.Add(senialAdquirida.descripcion);
 
-            for (int i = 0; i < senial.CantidadValores(); i++)
+            for (int i = 0; i < senialAdquirida.CantidadValores(); i++)
             {
-                listBox1.Items.Add(senial.ObtenerValor(i));
+                listBox1.Items.Add(senialAdquirida.ObtenerValor(i));
             }
 
         }
 
         private void rbSenial2_CheckedChanged(object sender, EventArgs e)
         {
-            AdquisidorArchivo ad = new AdquisidorArchivo(new SenialPila(15));
-            ad.ubicacion = "c:\\Temp\\Datos.txt";
-            adquisidor = ad;
-            gAdquisidor.adquisidor = adquisidor;
-
+            adquisidor = FactoryAdquisidor.ObtenerAdquisidor("Archivo", senialAdquirida);
         }
 
         private void rbSenial1_CheckedChanged(object sender, EventArgs e)
         {
-            AdquisidorSenoidal adquisidor = new AdquisidorSenoidal(new SenialPila(15));
-            gAdquisidor.adquisidor = adquisidor;
+            adquisidor = FactoryAdquisidor.ObtenerAdquisidor("Senoidal", senialAdquirida);
         }
 
         private void rbProc1_CheckedChanged(object sender, EventArgs e)
         {
             listBox2.Items.Clear();
-            this.senialProcesada = new SenialBasica();
-
-            this.gProcesador = new GestorProcesador(new ProcesadorSimple());
-            this.gProcesador.Procesar(gAdquisidor.Obtener(), this.senialProcesada);
+            senialProcesada.Limpiar();
+            procesador = FactoryProcesador.ObtenerProcesador("Simple");
+            procesador.Procesar(senialAdquirida, senialProcesada);
             
         }
 
         private void btnProcesar_Click(object sender, EventArgs e)
         {
-            senial = new SenialBasica();
-            senial = this.senialProcesada;
-            listBox2.Items.Add(senial.descripcion);
 
-            for (int i = 0; i < senial.CantidadValores(); i++)
+            listBox2.Items.Add(senialProcesada.descripcion);
+
+            for (int i = 0; i < senialProcesada.CantidadValores(); i++)
             {
-                listBox2.Items.Add(senial.ObtenerValor(i));
+                listBox2.Items.Add(senialProcesada.ObtenerValor(i));
             }
         }
 
         private void rbProc2_CheckedChanged(object sender, EventArgs e)
         {
             listBox2.Items.Clear();
-            this.senialProcesada = new SenialBasica();
-
-            this.gProcesador = new GestorProcesador(new ProcesadorConUmbral());
-            this.gProcesador.Procesar(gAdquisidor.Obtener(), this.senialProcesada);
+            senialProcesada.Limpiar();
+            procesador = FactoryProcesador.ObtenerProcesador("Simple");
+            procesador.Procesar(senialAdquirida, senialProcesada);
+            
+            procesador = FactoryProcesador.ObtenerProcesador("Umbral");
+            procesador.Procesar(senialAdquirida, senialProcesada);
+            ;
         }
 
         private void rbProc3_CheckedChanged(object sender, EventArgs e)
         {
             listBox2.Items.Clear();
-            this.senialProcesada = new SenialBasica();
+            senialProcesada.Limpiar();
+            procesador = FactoryProcesador.ObtenerProcesador("Diferencial");
+            procesador.Procesar(senialAdquirida, senialProcesada);
+            
+        }
 
-            this.gProcesador = new GestorProcesador(new ProcesadorDiferencial());
-            this.gProcesador.Procesar(gAdquisidor.Obtener(), this.senialProcesada);
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
     }

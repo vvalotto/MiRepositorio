@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbSenial2 = new System.Windows.Forms.RadioButton();
             this.rbSenial1 = new System.Windows.Forms.RadioButton();
-            this.btnMostrar = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnAdquirir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,7 +49,6 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.rbSenial2);
             this.panel1.Controls.Add(this.rbSenial1);
-            this.panel1.Controls.Add(this.btnMostrar);
             this.panel1.Controls.Add(this.listBox1);
             this.panel1.Controls.Add(this.btnAdquirir);
             this.panel1.Location = new System.Drawing.Point(31, 25);
@@ -81,16 +79,6 @@
             this.rbSenial1.Text = "Senial Basica";
             this.rbSenial1.UseVisualStyleBackColor = true;
             this.rbSenial1.CheckedChanged += new System.EventHandler(this.rbSenial1_CheckedChanged);
-            // 
-            // btnMostrar
-            // 
-            this.btnMostrar.Location = new System.Drawing.Point(83, 562);
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(75, 23);
-            this.btnMostrar.TabIndex = 4;
-            this.btnMostrar.Text = "Mostrar";
-            this.btnMostrar.UseVisualStyleBackColor = true;
-            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // listBox1
             // 
@@ -182,11 +170,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 661);
+            this.ClientSize = new System.Drawing.Size(762, 661);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "SOLID";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -201,7 +190,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btnAdquirir;
-        private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.RadioButton rbSenial2;
         private System.Windows.Forms.RadioButton rbSenial1;
         private System.Windows.Forms.Panel panel2;
