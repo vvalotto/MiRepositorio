@@ -91,5 +91,12 @@ namespace DIP.EjemploSenial.Modelo
 			return _largo;
         }
 
+        public override void Limpiar()
+        {
+            base.Limpiar();
+            _pfinal = 0;
+            _pinicial = 0;
+            _largo = 0;
+        }
     }
 }

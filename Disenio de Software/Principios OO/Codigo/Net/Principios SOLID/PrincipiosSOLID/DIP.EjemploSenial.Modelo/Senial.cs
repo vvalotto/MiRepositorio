@@ -54,11 +54,11 @@ namespace DIP.EjemploSenial.Modelo
             return (decimal)this._valores[indice];
         }
 
-        public void Limpiar()
+        public virtual void Limpiar()
         {
             this._valores.Clear();
         }
-
+        
         public virtual void PonerValor(decimal valor)
         {
             this._valores.Add(valor);

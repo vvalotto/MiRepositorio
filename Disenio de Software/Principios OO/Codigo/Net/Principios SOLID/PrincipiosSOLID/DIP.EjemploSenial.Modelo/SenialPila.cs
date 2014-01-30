@@ -85,7 +85,12 @@ namespace DIP.EjemploSenial.Modelo
         {
             return this._valores.Count;
         }
-
+        
+        public override void Limpiar()
+        {
+            base.Limpiar();
+            _tope = 0;
+        }
 
         public void Trazar(string mensaje, Nivel nivel)
         {
@@ -113,6 +118,7 @@ namespace DIP.EjemploSenial.Modelo
                 auditor.WriteLine(this.fecha_adquisicion.ToString());
             }
         }
+
 
         public void IniTraza(string logger, Nivel nivel)
         {

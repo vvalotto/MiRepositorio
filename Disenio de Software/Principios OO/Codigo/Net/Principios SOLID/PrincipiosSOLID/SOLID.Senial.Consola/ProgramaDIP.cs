@@ -24,10 +24,12 @@ namespace SOLID.Tratamiento.Consola
 			Senial senialAdquirida;
 			Senial senialProcesada;
 
-			adquisidor = FactoryAdquisidor.ObtenerAdquisidor ("Simple", senialAdquirida);
-			procesador = FactoryProcesador.ObtenerProcesador ("Umbral");
 			senialAdquirida = FactorySenial.ObtenerSenial("Pila", 5);
 			senialProcesada = FactorySenial.ObtenerSenial("Basica", 0);
+
+			adquisidor = FactoryAdquisidor.ObtenerAdquisidor("Simple", senialAdquirida);
+			procesador = FactoryProcesador.ObtenerProcesador ("Umbral");
+
 
 			var identificador = new Identificador ();
 			var visualizador = new Visualizador ();
