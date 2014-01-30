@@ -63,14 +63,6 @@ namespace SOLID.Tratamiento.GUI
             adquisidor = FactoryAdquisidor.ObtenerAdquisidor("Senoidal", senialAdquirida);
         }
 
-        private void rbProc1_CheckedChanged(object sender, EventArgs e)
-        {
-            listBox2.Items.Clear();
-            senialProcesada.Limpiar();
-            procesador = FactoryProcesador.ObtenerProcesador("Simple");
-            procesador.Procesar(senialAdquirida, senialProcesada);
-            
-        }
 
         private void btnProcesar_Click(object sender, EventArgs e)
         {
@@ -83,12 +75,19 @@ namespace SOLID.Tratamiento.GUI
             }
         }
 
+		private void rbProc1_CheckedChanged(object sender, EventArgs e)
+		{
+			listBox2.Items.Clear();
+			senialProcesada.Limpiar();
+			procesador = FactoryProcesador.ObtenerProcesador("Simple");
+			procesador.Procesar(senialAdquirida, senialProcesada);
+
+		}
+
         private void rbProc2_CheckedChanged(object sender, EventArgs e)
         {
             listBox2.Items.Clear();
             senialProcesada.Limpiar();
-            procesador = FactoryProcesador.ObtenerProcesador("Simple");
-            procesador.Procesar(senialAdquirida, senialProcesada);
             
             procesador = FactoryProcesador.ObtenerProcesador("Umbral");
             procesador.Procesar(senialAdquirida, senialProcesada);

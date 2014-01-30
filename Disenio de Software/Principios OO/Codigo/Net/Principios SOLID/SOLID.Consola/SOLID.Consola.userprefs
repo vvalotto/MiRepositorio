@@ -1,10 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../PrincipiosSOLID/DIP.EjemploSenial.DAO/FactoryDAO.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../PrincipiosSOLID/DIP.EjemploSenial.Identificador/Indentifcador.cs">
     <Files>
       <File FileName="SOLID.Final/Program.cs" Line="1" Column="1" />
-      <File FileName="SOLID.Final/ProgramaDIP.cs" Line="2" Column="7" />
+      <File FileName="SOLID.Final/ProgramaDIP.cs" Line="1" Column="1" />
       <File FileName="../PrincipiosSOLID/DIP.EjemploSenial.DAO/FactoryDAO.cs" Line="5" Column="25" />
+      <File FileName="../PrincipiosSOLID/DIP.EjemploSenial.Identificador/Indentifcador.cs" Line="19" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

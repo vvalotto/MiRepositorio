@@ -62,5 +62,9 @@
       <Project>{50822588-5A50-427A-8390-788333F5F217}</Project>
       <Name>DIP.EjemploSenial.Utils</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\PrincipiosSOLID\DIP.EjemploSenial.Visualizador\DIP.EjemploSenial.Visualizador.csproj">
+      <Project>{F2155E99-6C14-4F88-A827-9178A9DF7A7B}</Project>
+      <Name>DIP.EjemploSenial.Visualizador</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

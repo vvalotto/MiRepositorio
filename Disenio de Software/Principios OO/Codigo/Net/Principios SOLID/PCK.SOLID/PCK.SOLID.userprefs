@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../PrincipiosSOLID/DIP.EjemploSenial.DAO/FactoryDAO.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SOLID.Tratamiento.GUI/SOLID Principios.cs">
     <Files>
       <File FileName="../PrincipiosSOLID/DIP.EjemploSenial.DAO/FactoryDAO.cs" Line="5" Column="25" />
+      <File FileName="SOLID.Tratamiento.GUI/SOLID Principios.cs" Line="10" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
