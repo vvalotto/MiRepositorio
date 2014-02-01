@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B6183EF-6B32-4E13-93FF-F96AD53C0DFD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SOLID.Consola</RootNamespace>
+    <AssemblyName>SOLID.Consola</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\..\Temp\EjemploSenial</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\..\Temp\EjemploSenial</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProgramaTratamientoSenial.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\REP.EjemploSenial.Adquisidor\REP.EjemploSenial.Adquisidor.csproj">
+      <Project>{EAE32FEE-6340-45E2-8AE5-617795ACE624}</Project>
+      <Name>REP.EjemploSenial.Adquisidor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\REP.EjemploSenial.DAO\REP.EjemploSenial.DAO.csproj">
+      <Project>{1818F7CE-14C3-4DC1-BBF5-7278FFC23A68}</Project>
+      <Name>REP.EjemploSenial.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\REP.EjemploSenial.Identificador\REP.EjemploSenial.Identificador.csproj">
+      <Project>{91B96244-1D58-4F5B-8EAD-54BE20140538}</Project>
+      <Name>REP.EjemploSenial.Identificador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\REP.EjemploSenial.Modelo\REP.EjemploSenial.Modelo.csproj">
+      <Project>{695D4F79-4A55-481D-8120-BF985A409632}</Project>
+      <Name>REP.EjemploSenial.Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\REP.EjemploSenial.Procesador\REP.EjemploSenial.Procesador.csproj">
+      <Project>{38B9DE79-62B2-49D6-B753-5BF0FF986BE7}</Project>
+      <Name>REP.EjemploSenial.Procesador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\REP.EjemploSenial.Utils\REP.EjemploSenial.Utils.csproj">
+      <Project>{0272A7ED-8EDD-403B-AB98-F1636F6C77C4}</Project>
+      <Name>REP.EjemploSenial.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\REP.EjemploSenial.Visualizador\REP.EjemploSenial.Visualizador.csproj">
+      <Project>{3B0DEDFE-BAC0-4037-97E8-E36934A5E7FC}</Project>
+      <Name>REP.EjemploSenial.Visualizador</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

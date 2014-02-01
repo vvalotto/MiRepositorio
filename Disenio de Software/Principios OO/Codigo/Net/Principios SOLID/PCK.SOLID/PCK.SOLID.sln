@@ -1,9 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.Tratamiento.GUI", "SOLID.Tratamiento.GUI\SOLID.Tratamiento.GUI.csproj", "{1EAC9AB7-0363-4446-9C1D-1E83A965BDB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.Consola2", "SOLID.Consola2\SOLID.Consola2.csproj", "{592972A7-F115-4372-978C-EBD4088F048D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIP.EjemploSenial.DAO", "..\PrincipiosSOLID\DIP.EjemploSenial.DAO\DIP.EjemploSenial.DAO.csproj", "{CB5FA623-66D3-4F86-B86F-EB40E9F714F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP.EjemploSenial.Modelo", "REP.EjemploSenial.Modelo\REP.EjemploSenial.Modelo.csproj", "{695D4F79-4A55-481D-8120-BF985A409632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP.EjemploSenial.Utils", "REP.EjemploSenial.Utils\REP.EjemploSenial.Utils.csproj", "{0272A7ED-8EDD-403B-AB98-F1636F6C77C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP.EjemploSenial.DAO", "REP.EjemploSenial.DAO\REP.EjemploSenial.DAO.csproj", "{1818F7CE-14C3-4DC1-BBF5-7278FFC23A68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP.EjemploSenial.Identificador", "REP.EjemploSenial.Identificador\REP.EjemploSenial.Identificador.csproj", "{91B96244-1D58-4F5B-8EAD-54BE20140538}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP.EjemploSenial.Procesador", "REP.EjemploSenial.Procesador\REP.EjemploSenial.Procesador.csproj", "{38B9DE79-62B2-49D6-B753-5BF0FF986BE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP.EjemploSenial.Visualizador", "REP.EjemploSenial.Visualizador\REP.EjemploSenial.Visualizador.csproj", "{3B0DEDFE-BAC0-4037-97E8-E36934A5E7FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.Consola", "SOLID.Consola\SOLID.Consola.csproj", "{0B6183EF-6B32-4E13-93FF-F96AD53C0DFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REP.EjemploSenial.Adquisidor", "REP.EjemploSenial.Adquisidor\REP.EjemploSenial.Adquisidor.csproj", "{EAE32FEE-6340-45E2-8AE5-617795ACE624}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID.GUI", "SOLID.GUI\SOLID.GUI.csproj", "{1EAC9AB7-0363-4446-9C1D-1E83A965BDB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +27,49 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0272A7ED-8EDD-403B-AB98-F1636F6C77C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0272A7ED-8EDD-403B-AB98-F1636F6C77C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0272A7ED-8EDD-403B-AB98-F1636F6C77C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0272A7ED-8EDD-403B-AB98-F1636F6C77C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B6183EF-6B32-4E13-93FF-F96AD53C0DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B6183EF-6B32-4E13-93FF-F96AD53C0DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B6183EF-6B32-4E13-93FF-F96AD53C0DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B6183EF-6B32-4E13-93FF-F96AD53C0DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1818F7CE-14C3-4DC1-BBF5-7278FFC23A68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1818F7CE-14C3-4DC1-BBF5-7278FFC23A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1818F7CE-14C3-4DC1-BBF5-7278FFC23A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1818F7CE-14C3-4DC1-BBF5-7278FFC23A68}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1EAC9AB7-0363-4446-9C1D-1E83A965BDB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1EAC9AB7-0363-4446-9C1D-1E83A965BDB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EAC9AB7-0363-4446-9C1D-1E83A965BDB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EAC9AB7-0363-4446-9C1D-1E83A965BDB5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CB5FA623-66D3-4F86-B86F-EB40E9F714F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CB5FA623-66D3-4F86-B86F-EB40E9F714F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CB5FA623-66D3-4F86-B86F-EB40E9F714F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CB5FA623-66D3-4F86-B86F-EB40E9F714F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38B9DE79-62B2-49D6-B753-5BF0FF986BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38B9DE79-62B2-49D6-B753-5BF0FF986BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38B9DE79-62B2-49D6-B753-5BF0FF986BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38B9DE79-62B2-49D6-B753-5BF0FF986BE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B0DEDFE-BAC0-4037-97E8-E36934A5E7FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B0DEDFE-BAC0-4037-97E8-E36934A5E7FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B0DEDFE-BAC0-4037-97E8-E36934A5E7FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B0DEDFE-BAC0-4037-97E8-E36934A5E7FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{592972A7-F115-4372-978C-EBD4088F048D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{592972A7-F115-4372-978C-EBD4088F048D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{592972A7-F115-4372-978C-EBD4088F048D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{592972A7-F115-4372-978C-EBD4088F048D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{695D4F79-4A55-481D-8120-BF985A409632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{695D4F79-4A55-481D-8120-BF985A409632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{695D4F79-4A55-481D-8120-BF985A409632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{695D4F79-4A55-481D-8120-BF985A409632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91B96244-1D58-4F5B-8EAD-54BE20140538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91B96244-1D58-4F5B-8EAD-54BE20140538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91B96244-1D58-4F5B-8EAD-54BE20140538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91B96244-1D58-4F5B-8EAD-54BE20140538}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAE32FEE-6340-45E2-8AE5-617795ACE624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAE32FEE-6340-45E2-8AE5-617795ACE624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAE32FEE-6340-45E2-8AE5-617795ACE624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAE32FEE-6340-45E2-8AE5-617795ACE624}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = SOLID.GUI\SOLID.GUI.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
