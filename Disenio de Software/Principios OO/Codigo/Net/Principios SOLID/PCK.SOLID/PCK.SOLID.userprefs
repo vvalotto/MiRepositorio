@@ -1,8 +1,8 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SOLID.Consola/ProgramaTratamientoSenial.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="SOLID.Consola/ProgramaTratamientoSenial.cs" Line="2" Column="7" />
+      <File FileName="SOLID.GUI/SOLID Principios.cs" Line="33" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

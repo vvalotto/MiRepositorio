@@ -40,10 +40,4 @@
     <Compile Include="FactorySenial.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\DIP.EjemploSenial.Utils\DIP.EjemploSenial.Utils.csproj">
-      <Project>{50822588-5A50-427A-8390-788333F5F217}</Project>
-      <Name>DIP.EjemploSenial.Utils</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

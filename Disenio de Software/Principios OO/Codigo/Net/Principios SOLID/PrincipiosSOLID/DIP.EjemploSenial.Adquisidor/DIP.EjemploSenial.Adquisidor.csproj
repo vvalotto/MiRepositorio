@@ -41,10 +41,4 @@
     <Compile Include="FactoryAdquisidor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\DIP.EjemploSenial.Modelo\DIP.EjemploSenial.Modelo.csproj">
-      <Project>{000738B7-275B-4689-99AD-F649E7799794}</Project>
-      <Name>DIP.EjemploSenial.Modelo</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

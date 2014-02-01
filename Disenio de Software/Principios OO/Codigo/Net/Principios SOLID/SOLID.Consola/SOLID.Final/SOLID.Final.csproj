@@ -37,34 +37,4 @@
     <Compile Include="ProgramaDIP.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\..\PrincipiosSOLID\DIP.EjemploSenial.Adquisidor\DIP.EjemploSenial.Adquisidor.csproj">
-      <Project>{A255AFCC-8660-4D1F-8F56-0C0666930FFE}</Project>
-      <Name>DIP.EjemploSenial.Adquisidor</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PrincipiosSOLID\DIP.EjemploSenial.DAO\DIP.EjemploSenial.DAO.csproj">
-      <Project>{CB5FA623-66D3-4F86-B86F-EB40E9F714F8}</Project>
-      <Name>DIP.EjemploSenial.DAO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PrincipiosSOLID\DIP.EjemploSenial.Identificador\DIP.EjemploSenial.Identificador.csproj">
-      <Project>{22F15911-F800-4B70-985B-D72139DFBB08}</Project>
-      <Name>DIP.EjemploSenial.Identificador</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PrincipiosSOLID\DIP.EjemploSenial.Modelo\DIP.EjemploSenial.Modelo.csproj">
-      <Project>{000738B7-275B-4689-99AD-F649E7799794}</Project>
-      <Name>DIP.EjemploSenial.Modelo</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PrincipiosSOLID\DIP.EjemploSenial.Procesador\DIP.EjemploSenial.Procesador.csproj">
-      <Project>{BEE7C40C-7F4B-4268-857E-21AE6FCBBB13}</Project>
-      <Name>DIP.EjemploSenial.Procesador</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PrincipiosSOLID\DIP.EjemploSenial.Utils\DIP.EjemploSenial.Utils.csproj">
-      <Project>{50822588-5A50-427A-8390-788333F5F217}</Project>
-      <Name>DIP.EjemploSenial.Utils</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PrincipiosSOLID\DIP.EjemploSenial.Visualizador\DIP.EjemploSenial.Visualizador.csproj">
-      <Project>{F2155E99-6C14-4F88-A827-9178A9DF7A7B}</Project>
-      <Name>DIP.EjemploSenial.Visualizador</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
