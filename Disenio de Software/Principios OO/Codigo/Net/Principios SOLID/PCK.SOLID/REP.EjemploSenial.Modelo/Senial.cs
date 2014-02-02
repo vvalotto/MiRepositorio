@@ -107,6 +107,11 @@ namespace REP.EjemploSenial.Modelo
         {
             return this;
         }
+
+        public override string ToString()
+        {
+            return Convert.ToString(this._id) + " - " + Convert.ToString(this._descripcion) + " - " + this._descripcion;
+        }
     }
 
     public class SenialBasica : Senial
@@ -117,4 +122,6 @@ namespace REP.EjemploSenial.Modelo
 
         }
     }
+
+    
 }

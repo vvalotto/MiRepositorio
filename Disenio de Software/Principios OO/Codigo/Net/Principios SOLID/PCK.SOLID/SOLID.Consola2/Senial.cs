@@ -3,6 +3,7 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 
+
 namespace SOLID.Consola
 {
 
@@ -53,11 +54,11 @@ namespace SOLID.Consola
             return (decimal)this._valores[indice];
         }
 
-        public void Limpiar()
+        public virtual void Limpiar()
         {
             this._valores.Clear();
         }
-
+        
         public virtual void PonerValor(decimal valor)
         {
             this._valores.Add(valor);
@@ -106,6 +107,11 @@ namespace SOLID.Consola
         {
             return this;
         }
+
+        public override string ToString()
+        {
+            return Convert.ToString(this._id) + " - " + Convert.ToString(this._descripcion) + " - " + this._descripcion;
+        }
     }
 
     public class SenialBasica : Senial
@@ -116,4 +122,6 @@ namespace SOLID.Consola
 
         }
     }
+
+    
 }

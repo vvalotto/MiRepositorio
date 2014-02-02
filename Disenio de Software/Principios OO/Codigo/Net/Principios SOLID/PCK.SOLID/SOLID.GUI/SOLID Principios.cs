@@ -22,6 +22,7 @@ namespace SOLID.Tratamiento.GUI
         IProcesador procesador;
         Senial senialAdquirida;
         Senial senialProcesada;
+        IRepositorio repositorio;
 
         public Form1()
         {
@@ -34,11 +35,22 @@ namespace SOLID.Tratamiento.GUI
 
         private void btnAdquirir_Click(object sender, EventArgs e)
         {
-            adquisidor.LeerSenial();
+            
+            if (adquisidor == null) {
+                MessageBox.Show("No se ha seleccionado un adquisidor","Atención");
+            }
+            else if ((txtDescAdq.Text.Length == 0) && (txtIDAdq.Text.Length == 0)){
+                MessageBox.Show("No se la ingresado identificacion","Atención");
+            }
+            else{
+                senialAdquirida.descripcion = txtDescAdq.Text;
+                senialAdquirida.Id = Convert.ToInt16(txtIDAdq.Text);
+                adquisidor.LeerSenial();
 
-            for (int i = 0; i < senialAdquirida.CantidadValores(); i++)
-            {
-                listBox1.Items.Add(senialAdquirida.ObtenerValor(i));
+                for (int i = 0; i < senialAdquirida.CantidadValores(); i++)
+                {
+                    listBox1.Items.Add(senialAdquirida.ObtenerValor(i));
+                }
             }
         }
 
@@ -68,11 +80,24 @@ namespace SOLID.Tratamiento.GUI
         private void btnProcesar_Click(object sender, EventArgs e)
         {
 
-            listBox2.Items.Add(senialProcesada.descripcion);
-
-            for (int i = 0; i < senialProcesada.CantidadValores(); i++)
+            if (senialAdquirida == null) {
+                MessageBox.Show("No se hay seña adquirida","Atención");
+            }
+            else if (procesador == null) {
+                MessageBox.Show("No se ha seleccionado un procesador","Atención");
+            }
+            else if ((tctDescProc.Text.Length == 0) && (txtIDProc.Text.Length == 0))
             {
-                listBox2.Items.Add(senialProcesada.ObtenerValor(i));
+                MessageBox.Show("No se la ingresado identificacion", "Atención");
+            }
+            else
+            {
+                listBox2.Items.Add(senialProcesada.descripcion);
+
+                for (int i = 0; i < senialProcesada.CantidadValores(); i++)
+                {
+                    listBox2.Items.Add(senialProcesada.ObtenerValor(i));
+                }
             }
         }
 
@@ -80,6 +105,8 @@ namespace SOLID.Tratamiento.GUI
 		{
 			listBox2.Items.Clear();
 			senialProcesada.Limpiar();
+            senialProcesada.descripcion = txtDescAdq.Text;
+            senialProcesada.Id = Convert.ToInt16(txtIDAdq.Text);
 			procesador = FactoryProcesador.ObtenerProcesador("Simple");
 			procesador.Procesar(senialAdquirida, senialProcesada);
 
@@ -89,22 +116,57 @@ namespace SOLID.Tratamiento.GUI
         {
             listBox2.Items.Clear();
             senialProcesada.Limpiar();
-            
+            senialProcesada.descripcion = txtDescAdq.Text;
+            senialProcesada.Id = Convert.ToInt16(txtIDAdq.Text);
             procesador = FactoryProcesador.ObtenerProcesador("Umbral");
             procesador.Procesar(senialAdquirida, senialProcesada);
-            ;
+            
         }
 
         private void rbProc3_CheckedChanged(object sender, EventArgs e)
         {
             listBox2.Items.Clear();
             senialProcesada.Limpiar();
+            senialProcesada.descripcion = txtDescAdq.Text;
+            senialProcesada.Id = Convert.ToInt16(txtIDAdq.Text);
             procesador = FactoryProcesador.ObtenerProcesador("Diferencial");
             procesador.Procesar(senialAdquirida, senialProcesada);
             
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbXML_CheckedChanged(object sender, EventArgs e)
+        {
+            repositorio = FactoryDAO.ObtenerRepositorio("XML", txtUbicacion.Text);
+        }
+
+        private void rbTexto_CheckedChanged(object sender, EventArgs e)
+        {
+            repositorio = FactoryDAO.ObtenerRepositorio("Texto", txtUbicacion.Text);
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Senial senTemp;
+            repositorio.Guardar(senialProcesada);
+            listBox3.Items.Clear();
+            listBox3.Items.Add("Se guardo la siguiente señal");
+            senTemp = repositorio.Recuperar(senialProcesada.Id);
+
+            listBox3.Items.Add(senTemp.Id);
+            listBox3.Items.Add(senTemp.descripcion);
+
+            for (int i = 0; i < senTemp.CantidadValores(); i++)
+            {
+                listBox3.Items.Add(senTemp.ObtenerValor(i));
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

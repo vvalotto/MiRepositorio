@@ -8,6 +8,7 @@ namespace REP.EjemploSenial.DAO
     {
         string _ubicacion;
 
+
         public RepositorioArchivo(string ubicacion)
         {
             try
@@ -125,7 +126,7 @@ namespace REP.EjemploSenial.DAO
 			string[] _linea;
 			char[] charSeparators = new char[] {';'};
 			_linea =  linea.Split(charSeparators,3) ;
-			senial.PonerValor (Convert.ToInt32 (_linea [1]));
+			senial.PonerValor (Convert.ToDecimal (_linea [1]));
 
 		}
 

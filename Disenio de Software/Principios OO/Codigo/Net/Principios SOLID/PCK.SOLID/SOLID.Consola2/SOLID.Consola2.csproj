@@ -63,6 +63,7 @@
     <Compile Include="AdquisidorArchivo.cs" />
     <Compile Include="AdquisidorSenoidal.cs" />
     <Compile Include="AdquisidorSimple.cs" />
+    <Compile Include="AuditorArchivo.cs" />
     <Compile Include="FactoryAdquisidor.cs" />
     <Compile Include="FactoryDAO.cs" />
     <Compile Include="FactoryProcesador.cs" />
@@ -73,6 +74,9 @@
     <Compile Include="IRepositorio.cs" />
     <Compile Include="ISenial.cs" />
     <Compile Include="ITrazable.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="LoggerArchivo.cs" />
+    <Compile Include="LoggerConsola.cs" />
     <Compile Include="ProcesadorConUmbral.cs" />
     <Compile Include="ProcesadorDiferencial.cs" />
     <Compile Include="ProcesadorSimple.cs" />

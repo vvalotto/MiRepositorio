@@ -12,7 +12,7 @@ namespace REP.EjemploSenial.Utils
     public interface ITrazable
     {
 
-        void IniTraza(string alogger, Nivel nivel);
+        void IniTraza(Nivel nivel);
 
         void Trazar(string mensaje, Nivel nivel);
 

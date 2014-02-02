@@ -8,14 +8,10 @@ using System.IO;
 
 namespace REP.EjemploSenial.Modelo
 {
-    public class SenialPila : Senial, ITrazable, IAuditable
+    public class SenialPila : Senial
     {
         int _tamanio;
         int _tope;
-
-        string _nombreAuditor;
-        string _nombreLogger;
-        Nivel _nivelLog;
 
         public int tamanio
         {
@@ -92,47 +88,5 @@ namespace REP.EjemploSenial.Modelo
             _tope = 0;
         }
 
-        public void Trazar(string mensaje, Nivel nivel)
-        {
-            if (this._nivelLog == nivel)
-            {
-                using (StreamWriter _Logger = File.AppendText(_nombreLogger))
-                {
-                    _Logger.WriteLine(">-------- {0}", DateTime.Now.ToString());
-                    _Logger.WriteLine(this.descripcion);
-                    _Logger.WriteLine(this.fecha_adquisicion.ToString());
-                    _Logger.WriteLine(mensaje);
-                }
-            }
-        }
-
-        public void Auditar(object usuario, object programa, object accion )
-        {
-            
-            using (StreamWriter auditor = File.AppendText(_nombreAuditor))
-            {
-                auditor.WriteLine("Usuario: {0}", usuario.ToString());
-                auditor.WriteLine("Programa: {0}", programa.ToString());
-                auditor.WriteLine("accion: {0}", accion.ToString());
-                auditor.WriteLine(this.descripcion);
-                auditor.WriteLine(this.fecha_adquisicion.ToString());
-            }
-        }
-
-
-        public void IniTraza(string logger, Nivel nivel)
-        {
-            this._nivelLog = nivel;
-            this._nombreLogger = logger;
-
-        }
-            
-
-        public void IniAuditoria(string _auditor)
-        {
-            this._nombreAuditor = _auditor;
-            
-
-        }
     }
 }

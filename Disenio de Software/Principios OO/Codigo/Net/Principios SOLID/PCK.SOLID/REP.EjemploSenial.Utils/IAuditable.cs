@@ -8,10 +8,6 @@ namespace REP.EjemploSenial.Utils
 {
     public interface IAuditable
     {
-        void IniAuditoria(string auditor);
-
         void Auditar(object usuario, object programa, object accion);
-
-
     }
 }

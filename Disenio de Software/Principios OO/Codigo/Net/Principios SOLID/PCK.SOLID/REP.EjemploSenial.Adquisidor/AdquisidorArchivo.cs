@@ -12,14 +12,8 @@ namespace REP.EjemploSenial.Adquisidor
 
         public string ubicacion
         {
-            get
-            {
-                return _ubicacion;
-            }
-            set
-            {
-                _ubicacion = value;
-            }
+            get {return _ubicacion;}
+            set {_ubicacion = value;}
         }
 
         public AdquisidorArchivo(Senial senial)

@@ -9,7 +9,7 @@ namespace SOLID.Consola
 		{
             Console.Clear();
 			Console.WriteLine("Ejmeplo DIP");
-			ProgramaDIP ejemDIP = new ProgramaDIP();
+			Programa ejemDIP = new Programa();
 		    ejemDIP.Ejecutar();
 			Console.WriteLine ("Fin");
 			Console.ReadLine ();

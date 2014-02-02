@@ -1,5 +1,5 @@
 using System;
-
+using REP.EjemploSenial.Utils;
 
 namespace SOLID.Consola
 {
@@ -11,6 +11,7 @@ namespace SOLID.Consola
 			Console.WriteLine("Programa Tratamiento Señal");
 			ProgramaTratamientoSenial tratSenial = new ProgramaTratamientoSenial();
 			tratSenial.Ejecutar();
+
 			Console.WriteLine ("Fin");
 			Console.ReadLine ();
 

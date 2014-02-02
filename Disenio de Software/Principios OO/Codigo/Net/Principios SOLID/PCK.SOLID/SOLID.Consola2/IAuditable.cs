@@ -8,10 +8,6 @@ namespace SOLID.Consola
 {
     public interface IAuditable
     {
-        void IniAuditoria(string auditor);
-
         void Auditar(object usuario, object programa, object accion);
-
-
     }
 }
