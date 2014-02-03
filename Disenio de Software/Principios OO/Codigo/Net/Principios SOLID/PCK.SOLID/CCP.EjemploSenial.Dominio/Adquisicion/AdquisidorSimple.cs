@@ -1,5 +1,6 @@
 ﻿using System;
 using CCP.EjemploSenial.Modelo;
+using CCP.EjemploSenial.IOConsola;
 
 namespace CCP.EjemploSenial.Dominio
 {
@@ -14,10 +15,8 @@ namespace CCP.EjemploSenial.Dominio
 
         protected override decimal LeerDatoEntrada()
         {
-            string _datoEnt;
-            decimal _dato;
-
-            Console.Write("Ingresar Dato:");
+            string _datoEnt = "0";
+      /*
             _datoEnt = Console.ReadLine();
             while (!decimal.TryParse(_datoEnt, out _dato))
             {
@@ -28,7 +27,34 @@ namespace CCP.EjemploSenial.Dominio
                 _datoEnt = Console.ReadLine();
 
             }
-            return _dato;
+             */
+            string _resulValidacion;
+            bool _errorIngreso;
+            ValidadorConsola _validadorDato;
+
+            _validadorDato = FactoryValidador.ObtenerValidador("Numero");
+            _validadorDato.ConfigurarMensajeError();
+            _validadorDato.Patron = "[0-9]";
+            _validadorDato.Largo = 6;
+
+            _errorIngreso = true;
+            while (_errorIngreso)
+            {
+                Console.Write("Ingresar Dato:");
+                _datoEnt = Console.ReadLine();
+                _resulValidacion = _validadorDato.Validar(_datoEnt);
+
+                if (_resulValidacion != "OK")
+                {
+                    Console.WriteLine(_resulValidacion);
+                }
+                else
+                {
+                    _errorIngreso = false;
+                }
+            }
+            
+            return Convert.ToDecimal(_datoEnt);
 
         }
 
