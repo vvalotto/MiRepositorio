@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B3B100BB-3232-4F88-BFB9-ACF9A3DC24BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CCP.EjemploSeñal.IOConsola</RootNamespace>
+    <AssemblyName>CCP.EjemploSeñal.IOConsola</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Indentifcador.cs" />
+    <Compile Include="Visualizador.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\CCP.EjemploSenial.Utils\CCP.EjemploSenial.Utils.csproj">
+      <Project>{A05DF616-32EE-47A1-A5E6-A202BF7A2998}</Project>
+      <Name>CCP.EjemploSenial.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CCP.EjemploSenial.Modelo\CCP.EjemploSenial.Modelo.csproj">
+      <Project>{92E6ADB8-822D-466F-B1DA-114BDAE105C3}</Project>
+      <Name>CCP.EjemploSenial.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

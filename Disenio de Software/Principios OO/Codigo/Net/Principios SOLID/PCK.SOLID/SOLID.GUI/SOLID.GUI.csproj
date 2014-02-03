@@ -35,10 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DAO, Version=1.0.5145.31810, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\Temp\EjemploSenial\DAO.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -60,6 +56,9 @@
     </Reference>
     <Reference Include="Utils">
       <HintPath>..\..\..\..\..\..\..\..\Temp\EjemploSenial\Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="DAO">
+      <HintPath>..\..\..\..\..\..\..\..\Temp\EjemploSenial\DAO.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
