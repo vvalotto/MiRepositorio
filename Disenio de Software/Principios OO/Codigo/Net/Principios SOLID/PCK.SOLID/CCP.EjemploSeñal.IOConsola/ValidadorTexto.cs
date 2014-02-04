@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace CCP.EjemploSenial.IOConsola
 {
-    class ValidadorTexto:ValidadorConsola
+    public class ValidadorTexto:ValidadorConsola
     {
         public override void ConfigurarMensajeError()
         {

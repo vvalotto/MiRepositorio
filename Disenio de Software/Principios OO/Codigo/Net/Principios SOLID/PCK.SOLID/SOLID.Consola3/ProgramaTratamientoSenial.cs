@@ -10,6 +10,7 @@ namespace SOLID.Consola
 {
 	public class ProgramaTratamientoSenial
 	{
+
 		public ProgramaTratamientoSenial ()
 		{
 		}
@@ -68,6 +69,7 @@ namespace SOLID.Consola
             visualizador.MostrarValores(repositorio.Recuperar(senialProcesada.Id));
 
 		}
+
 	}
 }
 

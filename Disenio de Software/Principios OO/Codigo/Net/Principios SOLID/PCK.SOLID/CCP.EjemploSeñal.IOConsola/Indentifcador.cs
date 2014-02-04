@@ -26,23 +26,22 @@ namespace CCP.EjemploSenial.IOConsola
 
        string IngresarID()
         {
-
-            string entrada = ""; ;
+            string _entrada = ""; ;
             string _resulValidacion;
             bool _errorIngreso;
             ValidadorConsola _validadorID;
 
             _validadorID = FactoryValidador.ObtenerValidador("Numero");
             _validadorID.ConfigurarMensajeError();
-            _validadorID.Patron = "[0-9]";
-            _validadorID.Largo = 3;
+            _validadorID.Patron = "^\\d+$";
+            _validadorID.Largo = 6;
 
             _errorIngreso = true;
             while (_errorIngreso)
                 {
                     Console.Write("Identificador de la Señal (numero):");
-                    entrada = Console.ReadLine();
-                    _resulValidacion = _validadorID.Validar(entrada);
+                    _entrada = Console.ReadLine();
+                    _resulValidacion = _validadorID.Validar(_entrada);
 
                     if (_resulValidacion != "OK")
                     {
@@ -53,12 +52,12 @@ namespace CCP.EjemploSenial.IOConsola
                         _errorIngreso = false;
                     }
                 }
-            return entrada;
+            return _entrada;
 		}
 
        string IngresarDescripcion()
        {
-           string entrada ="";
+           string _entrada ="";
            string _resulValidacion;
            bool _errorIngreso;
            ValidadorConsola _validadorDesc;
@@ -72,8 +71,8 @@ namespace CCP.EjemploSenial.IOConsola
            while (_errorIngreso)
            {
                Console.Write("Descripcion de identificacion:");
-               entrada = Console.ReadLine();
-               _resulValidacion = _validadorDesc.Validar(entrada);
+               _entrada = Console.ReadLine();
+               _resulValidacion = _validadorDesc.Validar(_entrada);
 
                if (_resulValidacion != "OK")
                {
@@ -84,7 +83,7 @@ namespace CCP.EjemploSenial.IOConsola
                    _errorIngreso = false;
                }
            }
-           return entrada;
+           return _entrada;
        }
 	}
 }
