@@ -5,12 +5,10 @@ using CCP.EjemploSenial.Datos;
 using CCP.EjemploSenial.Dominio;
 using CCP.EjemploSenial.IOConsola;
 
-
 namespace SOLID.Consola
 {
 	public class ProgramaTratamientoSenial
 	{
-
 		public ProgramaTratamientoSenial ()
 		{
 		}
@@ -69,7 +67,6 @@ namespace SOLID.Consola
             visualizador.MostrarValores(repositorio.Recuperar(senialProcesada.Id));
 
 		}
-
 	}
 }
 
